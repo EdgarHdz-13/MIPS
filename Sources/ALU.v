@@ -22,6 +22,7 @@ module ALU
 	input [3:0] alu_operation_i,
 	input [31:0] a_i,
 	input [31:0] b_i,
+	input [4:0] shamt_i,
 	output reg zero_o,
 	output reg [31:0] alu_data_o
 );
@@ -30,6 +31,7 @@ localparam ADD = 4'b0011;
 localparam SUB = 4'b0001;
 localparam LUI = 4'b0100;
 localparam OR	= 4'b0010;
+localparam SLL = 4'b0101;
    
    always @ (a_i or b_i or alu_operation_i)
      begin
@@ -43,6 +45,8 @@ localparam OR	= 4'b0010;
 			alu_data_o = {b_i[15:0],16'b0};
 		  OR:
 		   alu_data_o = a_i|b_i;
+		  SLL:
+			alu_data_o = b_i<<shamt_i;
 		  
 			
 		default:

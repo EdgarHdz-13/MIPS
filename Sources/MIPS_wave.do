@@ -10,13 +10,17 @@ add wave -noupdate -expand -group {Program Memory} -radix hexadecimal /MIPS_Proc
 add wave -noupdate -expand -group Reg_File -group Reg_File /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/reg_write_i
 add wave -noupdate -expand -group Reg_File -label s0 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s0/data_o
 add wave -noupdate -expand -group Reg_File -label s1 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s1/data_o
+add wave -noupdate -expand -group Reg_File -label s2 -radix decimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s2/data_o
+add wave -noupdate -expand -group Reg_File -label s3 -radix decimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s3/data_o
+add wave -noupdate -expand -group Reg_File -label t0 /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t0/data_o
+add wave -noupdate -expand -group Reg_File -label t1 /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t1/data_o
 add wave -noupdate -expand -group ALU -expand -group ALU -radix binary /MIPS_Processor_TB/DUV/ALU_UNIT/alu_operation_i
-add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_UNIT/a_i
-add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_UNIT/b_i
-add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_UNIT/alu_data_o
+add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/a_i
+add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/b_i
+add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/alu_data_o
 add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_UNIT/zero_o
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {25 ps} 0}
+WaveRestoreCursors {{Cursor 1} {21 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 66
