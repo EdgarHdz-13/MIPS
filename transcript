@@ -1,106 +1,6 @@
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
 vsim -gui work.MIPS_Processor_TB
 # vsim -gui work.MIPS_Processor_TB 
-# Start time: 20:39:37 on Jun 21,2021
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.ALU_Control
-# Loading work.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# 16 compiles, 0 failed with no errors.
-do C:/MIPS/Sources/MIPS_wave.do
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlft5fzvxr".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft5fzvxr
-run
-run
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.Register_File
-# Loading work.Register
-# Loading work.Sign_Extend
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
-run
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# 16 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.ALU_Control
-# Loading work.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
-run
-vsim -gui work.MIPS_Processor_TB
-# End time: 20:45:30 on Jun 21,2021, Elapsed time: 0:05:53
-# Errors: 0, Warnings: 5
-# vsim -gui work.MIPS_Processor_TB 
-# Start time: 20:45:30 on Jun 21,2021
+# Start time: 20:57:45 on Jun 21,2021
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -123,75 +23,15 @@ vsim -gui work.MIPS_Processor_TB
 do C:/MIPS/Sources/MIPS_wave.do
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlft2nimk5".
+#           Attempting to use alternate WLF file "./wlftjvv7jg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft2nimk5
-run
-add wave -position 13 sim:/MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s0/*
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
-run
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# 16 compiles, 0 failed with no errors.
-vsim -gui work.MIPS_Processor_TB
-# End time: 20:53:30 on Jun 21,2021, Elapsed time: 0:08:00
-# Errors: 0, Warnings: 6
-# vsim -gui work.MIPS_Processor_TB 
-# Start time: 20:53:30 on Jun 21,2021
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.ALU_Control
-# Loading work.ALU
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
-# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
-do C:/MIPS/Sources/MIPS_wave.do
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlftvvxh81".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvvxh81
+#           Using alternate file: ./wlftjvv7jg
 add wave -position 9  sim:/MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s0/data_o
+run
+run
+run
+run
+run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
@@ -200,5 +40,86 @@ restart
 # ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
 # ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
 run
-# End time: 20:57:14 on Jun 21,2021, Elapsed time: 0:03:44
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/MIPS/Sources/MIPS_wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/MIPS/Sources/MIPS_wave.do
+vsim -gui work.MIPS_Processor_TB
+# End time: 21:06:27 on Jun 21,2021, Elapsed time: 0:08:42
 # Errors: 0, Warnings: 5
+# vsim -gui work.MIPS_Processor_TB 
+# Start time: 21:06:27 on Jun 21,2021
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
+do C:/MIPS/Sources/MIPS_wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
+#           Attempting to use alternate WLF file "./wlftifedab".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftifedab
+run
+add wave -position 9  sim:/MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s1/data_o
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/MIPS/Sources/MIPS_wave.do
+# Load canceled
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CONTROL_UNIT'.  Expected 10, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/CONTROL_UNIT File: C:/MIPS/Sources/MIPS_Processor.v Line: 69
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_read_o'.
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_to_reg_o'.
+# ** Warning: (vsim-3722) C:/MIPS/Sources/MIPS_Processor.v(69): [TFMPC] - Missing connection for port 'mem_write_o'.
+run
