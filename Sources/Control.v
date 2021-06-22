@@ -28,7 +28,10 @@ module Control
 
 
 localparam R_TYPE = 0;
+
 localparam I_TYPE_ADDI 	= 6'h8;
+localparam I_TYPE_LUI	= 6'hf;
+
 
 
 
@@ -40,7 +43,8 @@ always@(opcode_i) begin
 	
 		R_TYPE     	:  control_values_r = 11'b1_001_00_00_111;
 		I_TYPE_ADDI	:	control_values_r = 11'b0_101_00_00_100;
-
+		I_TYPE_LUI	:	control_values_r = 11'b0_101_00_00_001;
+		
 
 		default:
 			control_values_r = 11'b0000000000;
