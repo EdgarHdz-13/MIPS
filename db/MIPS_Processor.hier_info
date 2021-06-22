@@ -1,58 +1,64 @@
 |MIPS_Processor
 clk => clk.IN2
 reset => reset.IN2
-alu_result_o[0] <= alu_result_w[0].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[1] <= alu_result_w[1].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[2] <= alu_result_w[2].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[3] <= alu_result_w[3].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[4] <= alu_result_w[4].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[5] <= alu_result_w[5].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[6] <= alu_result_w[6].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[7] <= alu_result_w[7].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[8] <= alu_result_w[8].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[9] <= alu_result_w[9].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[10] <= alu_result_w[10].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[11] <= alu_result_w[11].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[12] <= alu_result_w[12].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[13] <= alu_result_w[13].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[14] <= alu_result_w[14].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[15] <= alu_result_w[15].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[16] <= alu_result_w[16].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[17] <= alu_result_w[17].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[18] <= alu_result_w[18].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[19] <= alu_result_w[19].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[20] <= alu_result_w[20].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[21] <= alu_result_w[21].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[22] <= alu_result_w[22].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[23] <= alu_result_w[23].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[24] <= alu_result_w[24].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[25] <= alu_result_w[25].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[26] <= alu_result_w[26].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[27] <= alu_result_w[27].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[28] <= alu_result_w[28].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[29] <= alu_result_w[29].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[30] <= alu_result_w[30].DB_MAX_OUTPUT_PORT_TYPE
-alu_result_o[31] <= alu_result_w[31].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[0] << alu_result_w[0].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[1] << alu_result_w[1].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[2] << alu_result_w[2].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[3] << alu_result_w[3].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[4] << alu_result_w[4].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[5] << alu_result_w[5].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[6] << alu_result_w[6].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[7] << alu_result_w[7].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[8] << alu_result_w[8].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[9] << alu_result_w[9].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[10] << alu_result_w[10].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[11] << alu_result_w[11].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[12] << alu_result_w[12].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[13] << alu_result_w[13].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[14] << alu_result_w[14].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[15] << alu_result_w[15].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[16] << alu_result_w[16].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[17] << alu_result_w[17].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[18] << alu_result_w[18].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[19] << alu_result_w[19].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[20] << alu_result_w[20].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[21] << alu_result_w[21].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[22] << alu_result_w[22].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[23] << alu_result_w[23].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[24] << alu_result_w[24].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[25] << alu_result_w[25].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[26] << alu_result_w[26].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[27] << alu_result_w[27].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[28] << alu_result_w[28].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[29] << alu_result_w[29].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[30] << alu_result_w[30].DB_MAX_OUTPUT_PORT_TYPE
+alu_result_o[31] << alu_result_w[31].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_Processor|Control:CONTROL_UNIT
 opcode_i[0] => Equal0.IN63
+opcode_i[0] => Equal1.IN63
 opcode_i[1] => Equal0.IN62
+opcode_i[1] => Equal1.IN62
 opcode_i[2] => Equal0.IN61
+opcode_i[2] => Equal1.IN61
 opcode_i[3] => Equal0.IN60
+opcode_i[3] => Equal1.IN60
 opcode_i[4] => Equal0.IN59
+opcode_i[4] => Equal1.IN59
 opcode_i[5] => Equal0.IN58
+opcode_i[5] => Equal1.IN58
 reg_dst_o <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 branch_eq_o <= <GND>
 branch_ne_o <= <GND>
 mem_read_o <= <GND>
 mem_to_reg_o <= <GND>
 mem_write_o <= <GND>
-alu_src_o <= <GND>
-reg_write_o <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+alu_src_o <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+reg_write_o <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
 alu_op_o[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 alu_op_o[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-alu_op_o[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+alu_op_o[2] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_Processor|Program_Counter:PC
@@ -8417,8 +8423,11 @@ mux_o[31] <= mux_o.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS_Processor|ALU_Control:ALU_CTRL
 alu_op_i[0] => Equal0.IN11
+alu_op_i[0] => WideNor0.IN0
 alu_op_i[1] => Equal0.IN10
+alu_op_i[1] => WideNor0.IN1
 alu_op_i[2] => Equal0.IN9
+alu_op_i[2] => WideNor0.IN2
 alu_function_i[0] => Equal0.IN17
 alu_function_i[1] => Equal0.IN16
 alu_function_i[2] => Equal0.IN15
@@ -8426,9 +8435,9 @@ alu_function_i[3] => Equal0.IN14
 alu_function_i[4] => Equal0.IN13
 alu_function_i[5] => Equal0.IN12
 alu_operation_o[0] <= <VCC>
-alu_operation_o[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+alu_operation_o[1] <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
 alu_operation_o[2] <= <GND>
-alu_operation_o[3] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+alu_operation_o[3] <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_Processor|ALU:ALU_UNIT
