@@ -29,11 +29,11 @@ module Control
 
 localparam R_TYPE = 0;
 
-localparam I_TYPE_ADDI 	= 6'h8;
-localparam I_TYPE_LUI	= 6'hf;
-localparam I_TYPE_ORI	= 6'hd;
-localparam I_TYPE_ANDI	= 6'hc;
-
+localparam I_TYPE_ADDI 	= 6'h08;
+localparam I_TYPE_LUI	= 6'h0f;
+localparam I_TYPE_ORI	= 6'h0d;
+localparam I_TYPE_ANDI	= 6'h0c;
+localparam I_TYPE_SW		= 6'h2b;
 
 
 
@@ -49,6 +49,7 @@ always@(opcode_i) begin
 		I_TYPE_LUI	:	control_values_r = 11'b0_101_00_00_001;
 		I_TYPE_ORI	:	control_values_r = 11'b0_101_00_00_010;
 		I_TYPE_ANDI	:	control_values_r = 11'b0_101_00_00_011;
+		I_TYPE_SW	:	control_values_r = 11'b0_000_01_00_101;
 		
 
 		default:

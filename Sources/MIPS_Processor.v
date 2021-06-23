@@ -44,6 +44,9 @@ wire reg_dst_w;
 wire alu_rc_w;
 wire reg_write_w;
 wire zero_w;
+wire mem_write_w;
+wire mem_read_w;
+wire mem_to_reg_w;
 wire [2:0] alu_op_w;
 wire [3:0] alu_operation_w;
 wire [4:0] write_register_w;
@@ -55,7 +58,8 @@ wire [31:0] inmmediate_extend_w;
 wire [31:0] read_ata_2_r_nmmediate_w;
 wire [31:0] alu_result_w;
 wire [31:0] pc_plus_4_w;
-
+wire [31:0] read_data_mmry_w;
+wire [31:0] read_data_mmry_r_alu_w;
 
 
 
@@ -73,7 +77,10 @@ CONTROL_UNIT
 	.branch_eq_o(branch_eq_w),
 	.alu_op_o(alu_op_w),
 	.alu_src_o(alu_rc_w),
-	.reg_write_o(reg_write_w)
+	.reg_write_o(reg_write_w),
+	.mem_read_o(mem_read_w),
+	.mem_write_o(mem_write_w),
+	.mem_to_reg_o(mem_to_reg_w)
 );
 
 Program_Counter
@@ -140,7 +147,7 @@ REGISTER_FILE_UNIT
 	.write_register_i(write_register_w),
 	.read_register_1_i(instruction_w[25:21]),
 	.read_register_2_i(instruction_w[20:16]),
-	.write_data_i(alu_result_w),
+	.write_data_i(read_data_mmry_r_alu_w),
 	.read_data_1_o(read_data_1_w),
 	.read_data_2_o(read_data_2_w)
 
@@ -192,8 +199,36 @@ ALU_UNIT
 	.alu_data_o(alu_result_w)
 );
 
-assign alu_result_o = alu_result_w;
 
+
+
+Data_Memory
+#(	
+	.DATA_WIDTH(32),
+	.MEMORY_DEPTH(256)
+)
+DATA_MMRY
+(
+	.write_data_i(read_data_2_w),
+	.address_i(alu_result_w),
+	.mem_write_i(mem_write_w),
+	.mem_read_i(mem_read_w), 
+	.clk(clk),
+	.data_o(read_data_mmry_w)
+);
+
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_READ_DATA_MEMORY_r_ALU
+(
+	.selector_i(mem_to_reg_w),
+	.data_0_i(alu_result_w),
+	.data_1_i(read_data_mmry_w),
+	.mux_o(read_data_mmry_r_alu_w)
+
+);
 
 endmodule
 
