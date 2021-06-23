@@ -20,13 +20,14 @@ add wave -noupdate -expand -group Reg_File -label s7 -radix hexadecimal /MIPS_Pr
 add wave -noupdate -expand -group Reg_File -color Gray75 -label t2 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t2/data_o
 add wave -noupdate -expand -group Reg_File -label DATA_MEMORY -radix hexadecimal {/MIPS_Processor_TB/DUV/DATA_MMRY/ram[0]}
 add wave -noupdate -expand -group Reg_File -label t3 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t3/data_o
-add wave -noupdate -expand -group Reg_File /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t5/data_o
 add wave -noupdate -expand -group ALU -radix binary /MIPS_Processor_TB/DUV/ALU_UNIT/alu_operation_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/a_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/b_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/alu_data_o
 add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_UNIT/zero_o
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/shamt_i
+add wave -noupdate -expand -group Data_Memory /MIPS_Processor_TB/DUV/DATA_MMRY/mem_write_i
+add wave -noupdate -expand -group Data_Memory /MIPS_Processor_TB/DUV/DATA_MMRY/mem_read_i
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {21 ps} 0}
 quietly wave cursor active 1
@@ -44,4 +45,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {7 ps} {70 ps}
+WaveRestoreZoom {0 ps} {63 ps}

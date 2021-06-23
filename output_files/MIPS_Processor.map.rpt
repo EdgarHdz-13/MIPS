@@ -1,5 +1,5 @@
 Analysis & Elaboration report for MIPS_Processor
-Wed Jun 23 02:04:38 2021
+Wed Jun 23 10:25:40 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -83,7 +83,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Jun 23 02:04:38 2021       ;
+; Analysis & Elaboration Status      ; Successful - Wed Jun 23 10:25:40 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_Processor                              ;
 ; Top-level Entity Name              ; MIPS_Processor                              ;
@@ -671,7 +671,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 23 02:04:31 2021
+    Info: Processing started: Wed Jun 23 10:25:33 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Processor -c MIPS_Processor --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -714,7 +714,7 @@ Warning (10034): Output port "alu_result_o" at MIPS_Processor.v(38) has no drive
 Info (12128): Elaborating entity "Control" for hierarchy "Control:CONTROL_UNIT" File: C:/MIPS/Sources/MIPS_Processor.v Line: 84
 Info (12128): Elaborating entity "Program_Counter" for hierarchy "Program_Counter:PC" File: C:/MIPS/Sources/MIPS_Processor.v Line: 93
 Info (12128): Elaborating entity "Program_Memory" for hierarchy "Program_Memory:ROM" File: C:/MIPS/Sources/MIPS_Processor.v Line: 104
-Warning (10850): Verilog HDL warning at Program_Memory.v(35): number of words (13) in memory file does not match the number of elements in the address range [0:31] File: C:/MIPS/Sources/Program_Memory.v Line: 35
+Warning (10850): Verilog HDL warning at Program_Memory.v(35): number of words (14) in memory file does not match the number of elements in the address range [0:31] File: C:/MIPS/Sources/Program_Memory.v Line: 35
 Warning (10030): Net "rom.data_a" at Program_Memory.v(31) has no driver or initial value, using a default initial value '0' File: C:/MIPS/Sources/Program_Memory.v Line: 31
 Warning (10030): Net "rom.waddr_a" at Program_Memory.v(31) has no driver or initial value, using a default initial value '0' File: C:/MIPS/Sources/Program_Memory.v Line: 31
 Warning (10030): Net "rom.we_a" at Program_Memory.v(31) has no driver or initial value, using a default initial value '0' File: C:/MIPS/Sources/Program_Memory.v Line: 31
@@ -732,9 +732,9 @@ Warning (10235): Verilog HDL Always Construct warning at ALU.v(53): variable "sh
 Warning (10235): Verilog HDL Always Construct warning at ALU.v(55): variable "shamt_i" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MIPS/Sources/ALU.v Line: 55
 Info (12128): Elaborating entity "Data_Memory" for hierarchy "Data_Memory:DATA_MMRY" File: C:/MIPS/Sources/MIPS_Processor.v Line: 218
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4714 megabytes
-    Info: Processing ended: Wed Jun 23 02:04:38 2021
+    Info: Peak virtual memory: 4705 megabytes
+    Info: Processing ended: Wed Jun 23 10:25:40 2021
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 

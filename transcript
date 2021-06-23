@@ -1,6 +1,23 @@
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
 vsim -gui work.MIPS_Processor_TB
 # vsim -gui work.MIPS_Processor_TB 
-# Start time: 02:04:57 on Jun 23,2021
+# Start time: 10:13:09 on Jun 23,2021
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -19,28 +36,90 @@ vsim -gui work.MIPS_Processor_TB
 do C:/MIPS/Sources/MIPS_wave.do
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlft8j41yb".
+#           Attempting to use alternate WLF file "./wlftb64wf3".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft8j41yb
+#           Using alternate file: ./wlftb64wf3
 run
+run
+add wave -position end  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/mem_write_i
+add wave -position end  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/mem_read_i
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/MIPS/Sources/MIPS_wave.do
-add wave -position 21  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[7]
-add wave -position 22  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[6]
-add wave -position 23  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[5]
-add wave -position 24  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[4]
-add wave -position 25  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[3]
-add wave -position 26  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[2]
-add wave -position 27  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[1]
-add wave -position 28  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[0]
+vsim -gui work.MIPS_Processor_TB
+# End time: 10:19:20 on Jun 23,2021, Elapsed time: 0:06:11
+# Errors: 0, Warnings: 1
+# vsim -gui work.MIPS_Processor_TB 
+# Start time: 10:19:20 on Jun 23,2021
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+do C:/MIPS/Sources/MIPS_wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
+#           Attempting to use alternate WLF file "./wlftjsmmym".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjsmmym
+run
+run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run
 run
-add wave -position 21  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[0]
 restart
 run
 run
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/MIPS/Sources/MIPS_wave.do
-# End time: 02:19:12 on Jun 23,2021, Elapsed time: 0:14:15
-# Errors: 0, Warnings: 1
+add wave -position end  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/address_i
+add wave -position 30  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/data_o
+restart
+run
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+run

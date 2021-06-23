@@ -35,7 +35,7 @@ localparam I_TYPE_ADDI	=	9'b100_xxxxxx;
 localparam I_TYPE_LUI	=	9'b001_xxxxxx;
 localparam I_TYPE_ORI	=	9'b010_xxxxxx;
 localparam I_TYPE_ANDI	=	9'b011_xxxxxx;
-localparam I_TYPE_SW		=	9'b101_xxxxxx;
+localparam I_TYPE_SW_LW =	9'b101_xxxxxx;
 
 
 
@@ -60,7 +60,7 @@ always@(selector_w)begin
 		I_TYPE_LUI 	:	alu_control_values_r	= 4'b0100; //4
 		I_TYPE_ORI	:	alu_control_values_r = 4'b0010;
 		I_TYPE_ANDI :  alu_control_values_r = 4'b0111;
-		I_TYPE_SW	:	alu_control_values_r = 4'b1001; //9
+		I_TYPE_SW_LW:	alu_control_values_r = 4'b1001; //9
 
 		default: alu_control_values_r = 4'b1001;
 	endcase

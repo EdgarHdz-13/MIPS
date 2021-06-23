@@ -34,6 +34,7 @@ localparam I_TYPE_LUI	= 6'h0f;
 localparam I_TYPE_ORI	= 6'h0d;
 localparam I_TYPE_ANDI	= 6'h0c;
 localparam I_TYPE_SW		= 6'h2b;
+localparam I_TYPE_LW		= 6'h23;
 
 
 
@@ -49,7 +50,8 @@ always@(opcode_i) begin
 		I_TYPE_LUI	:	control_values_r = 11'b0_101_00_00_001;
 		I_TYPE_ORI	:	control_values_r = 11'b0_101_00_00_010;
 		I_TYPE_ANDI	:	control_values_r = 11'b0_101_00_00_011;
-		I_TYPE_SW	:	control_values_r = 11'b0_000_01_00_101;
+		I_TYPE_SW	:	control_values_r = 11'b0_010_01_00_101;
+		I_TYPE_LW	:	control_values_r = 11'b0_011_10_00_101; //Para ahorrar FUNCT utilizaré el mismo FUNCT a SW ya que solo cambia el control
 		
 
 		default:

@@ -11,12 +11,21 @@ andi	$s5,$t0,3		#
 nor	$s6,$t1,$t0		#
 srl	$s7,$t0,2		#
 sll	$t2,$t0,2		#
-addi 	$s4,$zero,0
+#addi 	$s4,$zero,0		#
 sw	$t2,0($s4)		#
-lw	$t3,0($s4)
+lw	$t3,0($s4)		#
 
+j	continua
+addi	$t0,$t0,10		#
+addi	$t1,$t0,6		#
+continua:
+jal	funcion
 #beq	
 #bne
-#j
-#jal
-#jr
+j 	exit
+funcion:
+	addi	$t0,$t0,20
+	jr	$ra
+exit:
+
+
