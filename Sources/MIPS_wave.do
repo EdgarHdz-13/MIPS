@@ -7,13 +7,19 @@ add wave -noupdate -expand -group Program_Counter -radix hexadecimal -childforma
 add wave -noupdate -expand -group {Program Memory} -radix hexadecimal /MIPS_Processor_TB/DUV/ROM/address_i
 add wave -noupdate -expand -group {Program Memory} -radix hexadecimal /MIPS_Processor_TB/DUV/ROM/instruction_o
 add wave -noupdate -expand -group Reg_File /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/reg_write_i
+add wave -noupdate -expand -group Reg_File -color Gray75 -label t0 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t0/data_o
+add wave -noupdate -expand -group Reg_File -color Gray75 -label t1 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t1/data_o
 add wave -noupdate -expand -group Reg_File -color Tan -label s0 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s0/data_o
 add wave -noupdate -expand -group Reg_File -color Tan -label s1 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s1/data_o
 add wave -noupdate -expand -group Reg_File -color Tan -label s2 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s2/data_o
 add wave -noupdate -expand -group Reg_File -color Tan -label s3 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s3/data_o
-add wave -noupdate -expand -group Reg_File -color Gray75 -label t0 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t0/data_o
-add wave -noupdate -expand -group Reg_File -color Gray75 -label t1 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t1/data_o
+add wave -noupdate -expand -group Reg_File -label s4 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s4/data_o
+add wave -noupdate -expand -group Reg_File -label s5 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s5/data_o
+add wave -noupdate -expand -group Reg_File -label s6 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s6/data_o
+add wave -noupdate -expand -group Reg_File -label s7 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s7/data_o
 add wave -noupdate -expand -group Reg_File -color Gray75 -label t2 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t2/data_o
+add wave -noupdate -expand -group Reg_File -label t3 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t3/data_o
+add wave -noupdate -expand -group Reg_File -label t4 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t4/data_o
 add wave -noupdate -expand -group ALU -radix binary /MIPS_Processor_TB/DUV/ALU_UNIT/alu_operation_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/a_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/b_i
@@ -21,7 +27,7 @@ add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/
 add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_UNIT/zero_o
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/shamt_i
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {42 ps} 0}
+WaveRestoreCursors {{Cursor 1} {37 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 66
