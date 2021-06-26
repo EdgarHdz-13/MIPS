@@ -28,8 +28,10 @@ add wave -noupdate -expand -group ALU -radix decimal /MIPS_Processor_TB/DUV/ALU_
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/shamt_i
 add wave -noupdate -expand -group Data_Memory /MIPS_Processor_TB/DUV/DATA_MMRY/mem_write_i
 add wave -noupdate -expand -group Data_Memory /MIPS_Processor_TB/DUV/DATA_MMRY/mem_read_i
+add wave -noupdate -expand -group Data_Memory -radix hexadecimal /MIPS_Processor_TB/DUV/DATA_MMRY/address_i
+add wave -noupdate -expand -group Data_Memory -radix hexadecimal /MIPS_Processor_TB/DUV/DATA_MMRY/data_o
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {21 ps} 0}
+WaveRestoreCursors {{Cursor 1} {36 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 66
@@ -45,4 +47,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {63 ps}
+WaveRestoreZoom {0 ps} {67 ps}

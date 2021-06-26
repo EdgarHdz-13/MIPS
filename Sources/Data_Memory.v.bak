@@ -30,9 +30,9 @@ module Data_Memory
 	begin
 		// Write
 		if (mem_write_i)
-			ram[(address_i-32'h1001_0000)] <= write_data_i;
+			ram[address_i] <= write_data_i;
 	end
-	assign read_data_aux = ram[(address_i-32'h1001_0000)];
+	assign read_data_aux = ram[address_i];
   	assign data_o = {DATA_WIDTH{mem_read_i}}& read_data_aux;
 
 endmodule

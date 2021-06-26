@@ -17,7 +17,7 @@
 # 16 compiles, 0 failed with no errors.
 vsim -gui work.MIPS_Processor_TB
 # vsim -gui work.MIPS_Processor_TB 
-# Start time: 10:13:09 on Jun 23,2021
+# Start time: 09:31:29 on Jun 26,2021
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -36,22 +36,22 @@ vsim -gui work.MIPS_Processor_TB
 do C:/MIPS/Sources/MIPS_wave.do
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlftb64wf3".
+#           Attempting to use alternate WLF file "./wlftcz8axj".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftb64wf3
+#           Using alternate file: ./wlftcz8axj
 run
-run
-add wave -position end  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/mem_write_i
-add wave -position end  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/mem_read_i
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/MIPS/Sources/MIPS_wave.do
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
 vsim -gui work.MIPS_Processor_TB
-# End time: 10:19:20 on Jun 23,2021, Elapsed time: 0:06:11
-# Errors: 0, Warnings: 1
+# End time: 09:34:13 on Jun 26,2021, Elapsed time: 0:02:44
+# Errors: 0, Warnings: 4
 # vsim -gui work.MIPS_Processor_TB 
-# Start time: 10:19:20 on Jun 23,2021
+# Start time: 09:34:13 on Jun 26,2021
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -67,25 +67,75 @@ vsim -gui work.MIPS_Processor_TB
 # Loading work.ALU_Control
 # Loading work.ALU
 # Loading work.Data_Memory
-do C:/MIPS/Sources/MIPS_wave.do
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlftjsmmym".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftjsmmym
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
 run
 run
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+do C:/MIPS/Sources/MIPS_wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
+#           Attempting to use alternate WLF file "./wlft8scgnx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8scgnx
+run -continue
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Load canceled
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
 run
 restart
-run
-run
-add wave -position end  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/address_i
-add wave -position 30  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/data_o
-restart
-run
 run
 # Compile of Adder.v was successful.
 # Compile of ALU.v was successful.
@@ -121,5 +171,782 @@ restart
 # Loading work.ALU_Control
 # Loading work.ALU
 # Loading work.Data_Memory
+run
+restart
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+restart
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful with warnings.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+restart
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful with warnings.
+# Compile of Program_Memory.v was successful with warnings.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful with warnings.
+# Compile of Program_Memory.v was successful with warnings.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+restart
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Adder
+# Loading work.Decoder_Register_File
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# Warning in wave window restart: (vish-4014) No objects found matching '/MIPS_Processor_TB/DUV/DATA_MMRY/ram[0]'. 
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+run
+# ** Warning: (vsim-PLI-3410) Illegal character '\' in data on line 1 of file "C:/MIPS/Sources/text.dat".    : C:/MIPS/Sources/Program_Memory.v(35)
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ROM
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+run
+add wave -position 21  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[268500995]
+add wave -position 22  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[268500994]
+add wave -position 23  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[268500993]
+add wave -position 24  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[268500992]
+restart
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+add wave -position 7  sim:/MIPS_Processor_TB/DUV/ROM/real_address_r
+restart
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+restart
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v failed with 1 errors.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v failed with 1 errors.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 1 failed with 1 error.
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v failed with 1 errors.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+restart
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v failed with 1 errors.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 1 failed with 1 error.
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v failed with 1 errors.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 1 failed with 1 error.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# Warning in wave window restart: (vish-4014) No objects found matching '/MIPS_Processor_TB/DUV/DATA_MMRY/ram[268500992]'. 
+run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+run
+add wave -position 22  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[0]
+restart
 run
 run

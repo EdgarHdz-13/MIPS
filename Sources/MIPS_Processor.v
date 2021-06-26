@@ -47,10 +47,13 @@ wire zero_w;
 wire mem_write_w;
 wire mem_read_w;
 wire mem_to_reg_w;
+//wire PC_SRC_w;
 wire [2:0] alu_op_w;
 wire [3:0] alu_operation_w;
 wire [4:0] write_register_w;
 wire [31:0] pc_w;
+//wire [31:0] pc_shifterl2_w;
+//wire [31:0] pc_jmp_adder_w;
 wire [31:0] instruction_w;
 wire [31:0] read_data_1_w;
 wire [31:0] read_data_2_w;
@@ -117,6 +120,7 @@ PC_Puls_4
 );
 
 
+
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
@@ -160,6 +164,35 @@ SIGNED_EXTEND_FOR_CONSTANTS
    .sign_extend_o(inmmediate_extend_w)
 );
 
+/*Shift_Left_2
+JMP_SHIFTER
+(
+	.data_i(inmmediate_extend_w)),
+   .data_o(pc_shifterl2_w)
+
+);
+Adder
+JMP_ADDER
+(
+	.data_0_i(pc_plus_4_w),
+	.data_1_i(pc_shifterl2_w),
+	
+	.result_o(pc_jmp_adder_w)
+);
+
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_JMP_R_J4
+(
+	.selector_i(PC_SRC_w),
+	.data_0_i(pc_plus_4_w),
+	.data_1_i(pc_jmp_adder_w),
+	
+	.mux_o()
+
+);*/
 
 
 Multiplexer_2_to_1
@@ -200,7 +233,7 @@ ALU_UNIT
 );
 
 
-
+assign alu_result_o = alu_result_w;
 
 Data_Memory
 #(	
