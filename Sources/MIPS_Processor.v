@@ -54,11 +54,14 @@ wire [4:0] write_register_w;
 wire [31:0] pc_w;
 //wire [31:0] pc_shifterl2_w;
 //wire [31:0] pc_jmp_adder_w;
+wire [27:0] pc_jmp_w;
+wire [31:0] new_pc_w;
 wire [31:0] instruction_w;
 wire [31:0] read_data_1_w;
 wire [31:0] read_data_2_w;
 wire [31:0] inmmediate_extend_w;
 wire [31:0] read_ata_2_r_nmmediate_w;
+
 wire [31:0] alu_result_w;
 wire [31:0] pc_plus_4_w;
 wire [31:0] read_data_mmry_w;
@@ -91,7 +94,7 @@ PC
 (
 	.clk(clk),
 	.reset(reset),
-	.new_pc_i(pc_plus_4_w),
+	.new_pc_i(new_pc_w),
 	.pc_value_o(pc_w)
 );
 
@@ -164,35 +167,34 @@ SIGNED_EXTEND_FOR_CONSTANTS
    .sign_extend_o(inmmediate_extend_w)
 );
 
-/*Shift_Left_2
+Shift_Left_2
 JMP_SHIFTER
 (
-	.data_i(inmmediate_extend_w)),
-   .data_o(pc_shifterl2_w)
+	.data_i(instruction_w[25:0]),
+   .data_o(pc_jmp_w)
 
 );
-Adder
+/*Adder
 JMP_ADDER
 (
 	.data_0_i(pc_plus_4_w),
 	.data_1_i(pc_shifterl2_w),
 	
 	.result_o(pc_jmp_adder_w)
-);
+);*/
 
 Multiplexer_2_to_1
 #(
 	.N_BITS(32)
 )
-MUX_JMP_R_J4
+MUX_JMP_R_PC
 (
-	.selector_i(PC_SRC_w),
+	.selector_i(branch_eq_w && branch_ne_w),
 	.data_0_i(pc_plus_4_w),
-	.data_1_i(pc_jmp_adder_w),
+	.data_1_i({pc_plus_4_w[31:28],pc_jmp_w[27:0]}),
 	
-	.mux_o()
-
-);*/
+	.mux_o(new_pc_w)
+);
 
 
 Multiplexer_2_to_1

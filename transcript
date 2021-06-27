@@ -950,3 +950,235 @@ add wave -position 22  sim:/MIPS_Processor_TB/DUV/DATA_MMRY/ram[0]
 restart
 run
 run
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.Shift_Left_2
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+vsim -gui work.MIPS_Processor_TB
+# End time: 19:10:01 on Jun 26,2021, Elapsed time: 9:35:48
+# Errors: 0, Warnings: 3
+# vsim -gui work.MIPS_Processor_TB 
+# Start time: 19:10:02 on Jun 26,2021
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.Shift_Left_2
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+do C:/MIPS/Sources/MIPS_wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
+#           Attempting to use alternate WLF file "./wlftsf3k35".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsf3k35
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+run
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.Shift_Left_2
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# Compile of Adder.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of Control.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Register_File.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer_2_to_1.v was successful.
+# Compile of Mux_Register_File.v was successful.
+# Compile of Program_Counter.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of Register.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Sign_Extend.v was successful.
+# 16 compiles, 0 failed with no errors.
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.Program_Counter
+# Loading work.Program_Memory
+# Loading work.Adder
+# Loading work.Multiplexer_2_to_1
+# Loading work.Register_File
+# Loading work.Decoder_Register_File
+# Loading work.Register
+# Loading work.Mux_Register_File
+# Loading work.Sign_Extend
+# Loading work.Shift_Left_2
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+add wave -position 8  sim:/MIPS_Processor_TB/DUV/ROM/real_address_r
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+add wave -position 24 sim:/MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t4/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+add wave -position 9  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_0_i
+add wave -position 10  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_1_i
+add wave -position 5  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/selector_i
+add wave -position 6  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_0_i
+# Drop insertion failed: sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_0_i
+# Unrecognized option: "-box" ignored.
+add wave -position 6  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_1_i
+# Drop insertion failed: sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_1_i
+# Unrecognized option: "-box" ignored.
+add wave -position 6  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/mux_o
+# Drop insertion failed: sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/mux_o
+# Unrecognized option: "-box" ignored.
+add wave -position 9  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/selector_i
+add wave -position 10  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_0_i
+add wave -position 11  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/data_1_i
+add wave -position 12  sim:/MIPS_Processor_TB/DUV/MUX_JMP_R_PC/mux_o
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (26) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 171
+run

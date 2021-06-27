@@ -19,13 +19,13 @@ j	continua
 addi	$t0,$t0,10		#
 addi	$t1,$t0,6		#
 continua:
-jal	funcion
+#jal	funcion
 #beq	
 #bne
 j 	exit
 funcion:
 	addi	$t0,$t0,20
 	jr	$ra
-exit:
+exit:	addi 	$t4,$zero,23
 
 
