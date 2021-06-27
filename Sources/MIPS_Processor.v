@@ -41,29 +41,35 @@ module MIPS_Processor
 // Data types to connect modules
 
 wire reg_dst_w;
-wire alu_rc_w;
+wire alu_src_w;
 wire reg_write_w;
 wire zero_w;
+wire topc_w;
 wire mem_write_w;
 wire mem_read_w;
 wire mem_to_reg_w;
+wire jmp_w;
 //wire PC_SRC_w;
 wire [2:0] alu_op_w;
 wire [3:0] alu_operation_w;
+wire [4:0] write_mux_w;
 wire [4:0] write_register_w;
+
 wire [31:0] pc_w;
-//wire [31:0] pc_shifterl2_w;
+//wire [31:0] pc_erl2_w;
 //wire [31:0] pc_jmp_adder_w;
 wire [27:0] pc_jmp_w;
 wire [31:0] new_pc_w;
+wire [31:0] mux_jmp_r_pc_w;
 wire [31:0] instruction_w;
 wire [31:0] read_data_1_w;
 wire [31:0] read_data_2_w;
 wire [31:0] inmmediate_extend_w;
 wire [31:0] read_ata_2_r_nmmediate_w;
-
+wire [31:0] write_data_w;
 wire [31:0] alu_result_w;
 wire [31:0] pc_plus_4_w;
+wire [31:0] pc_plus_8_w;
 wire [31:0] read_data_mmry_w;
 wire [31:0] read_data_mmry_r_alu_w;
 
@@ -82,11 +88,12 @@ CONTROL_UNIT
 	.branch_ne_o(branch_ne_w),
 	.branch_eq_o(branch_eq_w),
 	.alu_op_o(alu_op_w),
-	.alu_src_o(alu_rc_w),
+	.alu_src_o(alu_src_w),
 	.reg_write_o(reg_write_w),
 	.mem_read_o(mem_read_w),
 	.mem_write_o(mem_write_w),
-	.mem_to_reg_o(mem_to_reg_w)
+	.mem_to_reg_o(mem_to_reg_w),
+	.jmp_o(jmp_w)
 );
 
 Program_Counter
@@ -122,7 +129,14 @@ PC_Puls_4
 	.result_o(pc_plus_4_w)
 );
 
-
+Adder
+PC_Puls_8
+(
+	.data_0_i(pc_w),
+	.data_1_i(32'h4),
+	
+	.result_o(pc_plus_8_w)
+);
 
 //******************************************************************/
 //******************************************************************/
@@ -139,7 +153,7 @@ MUX_R_TYPE_OR_I_Type
 	.data_0_i(instruction_w[20:16]),
 	.data_1_i(instruction_w[15:11]),
 	
-	.mux_o(write_register_w)
+	.mux_o(write_mux_w)
 
 );
 
@@ -154,7 +168,7 @@ REGISTER_FILE_UNIT
 	.write_register_i(write_register_w),
 	.read_register_1_i(instruction_w[25:21]),
 	.read_register_2_i(instruction_w[20:16]),
-	.write_data_i(read_data_mmry_r_alu_w),
+	.write_data_i(write_data_w),
 	.read_data_1_o(read_data_1_w),
 	.read_data_2_o(read_data_2_w)
 
@@ -189,21 +203,45 @@ Multiplexer_2_to_1
 )
 MUX_JMP_R_PC
 (
-	.selector_i(branch_eq_w && branch_ne_w),
+	.selector_i(jmp_w),
 	.data_0_i(pc_plus_4_w),
 	.data_1_i({pc_plus_4_w[31:28],pc_jmp_w[27:0]}),
 	
-	.mux_o(new_pc_w)
+	.mux_o(mux_jmp_r_pc_w)
 );
 
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_WRITE_REGISTER_JAL
+(
+	.selector_i(jmp_w),
+	.data_0_i(write_mux_w),
+	.data_1_i(5'h1f),
+	
+	.mux_o(write_register_w)
+);
 
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_REGISTER_WRITE_DATA_JAL
+(
+	.selector_i(jmp_w),
+	.data_0_i(read_data_mmry_r_alu_w),
+	.data_1_i(pc_plus_8_w),
+	
+	.mux_o(write_data_w)
+);
 Multiplexer_2_to_1
 #(
 	.N_BITS(32)
 )
 MUX_READ_DATA_2_OR_IMMEDIATE
 (
-	.selector_i(alu_rc_w),
+	.selector_i(alu_src_w),
 	.data_0_i(read_data_2_w),
 	.data_1_i(inmmediate_extend_w),
 	
@@ -211,6 +249,18 @@ MUX_READ_DATA_2_OR_IMMEDIATE
 
 );
 
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_REG_TO_PC
+(
+	.selector_i(topc_w),
+	.data_0_i(mux_jmp_r_pc_w),
+	.data_1_i(alu_result_w),
+	
+	.mux_o(new_pc_w)
+);
 
 ALU_Control
 ALU_CTRL
@@ -231,6 +281,7 @@ ALU_UNIT
 	.b_i(read_ata_2_r_nmmediate_w),
 	.shamt_i(instruction_w[10:6]),
 	.zero_o(zero_w),
+	.topc_o(topc_w),
 	.alu_data_o(alu_result_w)
 );
 
