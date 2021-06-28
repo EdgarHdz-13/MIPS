@@ -11,7 +11,8 @@
 ******************************************************************/
 module Register
 #(
-	parameter N_BITS = 32
+	parameter N_BITS = 32,
+	parameter INITIAL_VALUE = 0
 )
 (
 	input clk,
@@ -25,7 +26,7 @@ module Register
 
 always@(negedge reset or posedge clk) begin
 	if(reset==0)
-		data_o <= 0;
+		data_o <= INITIAL_VALUE;
 	else	
 		if(enable == 1)
 			data_o <= data_i;

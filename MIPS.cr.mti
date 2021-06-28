@@ -26,13 +26,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Control
 
-} {} {}} C:/MIPS/Sources/ALU.v {1 {vlog -work work -stats=none C:/MIPS/Sources/ALU.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module ALU
-
-Top level modules:
-	ALU
-
 } {} {}} C:/MIPS/Sources/Data_Memory.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Data_Memory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Data_Memory
@@ -61,19 +54,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MIPS_Processor_TB
 
-} {} {}} C:/MIPS/Sources/Adder.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Adder.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Adder
-
-Top level modules:
-	Adder
-
 } {} {}} C:/MIPS/Sources/Program_Memory.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Program_Memory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Program_Memory
 
 Top level modules:
 	Program_Memory
+
+} {} {}} C:/MIPS/Sources/MIPS_Processor.v {1 {vlog -work work -stats=none C:/MIPS/Sources/MIPS_Processor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MIPS_Processor
+
+Top level modules:
+	MIPS_Processor
+
+} {} {}} C:/MIPS/Sources/Adder.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Adder
+
+Top level modules:
+	Adder
 
 } {} {}} C:/MIPS/Sources/Sign_Extend.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Sign_Extend.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

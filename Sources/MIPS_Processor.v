@@ -162,6 +162,9 @@ MUX_R_TYPE_OR_I_Type
 
 
 Register_File
+#(
+	.MEMORY_DEPTH(MEMORY_DEPTH)
+)
 REGISTER_FILE_UNIT
 (
 	.clk(clk),

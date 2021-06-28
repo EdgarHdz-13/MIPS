@@ -57,8 +57,8 @@ always@(opcode_i) begin
 		I_TYPE_LUI	:	control_values_r = 12'b0_101_00_000_001;
 		I_TYPE_ORI	:	control_values_r = 12'b0_101_00_000_010;
 		I_TYPE_ANDI	:	control_values_r = 12'b0_101_00_000_011;
-		I_TYPE_SW	:	control_values_r = 12'b0_010_01_000_101;
-		I_TYPE_LW	:	control_values_r = 12'b0_011_10_000_101; //Para ahorrar FUNCT utilizaré el mismo FUNCT a SW ya que solo cambia el control
+		I_TYPE_SW	:	control_values_r = 12'b0_100_01_000_101;
+		I_TYPE_LW	:	control_values_r = 12'b0_111_10_000_101; //Para ahorrar FUNCT utilizaré el mismo FUNCT a SW ya que solo cambia el control
 		I_TYPE_BEQ	:	control_values_r = 12'b0_000_00_001_110;
 		I_TYPE_BNE	:	control_values_r = 12'b0_000_00_010_110;
 		

@@ -22,6 +22,7 @@ add wave -noupdate -expand -group Reg_File -label DATA_MEMORY -radix hexadecimal
 add wave -noupdate -expand -group Reg_File -label t3 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t3/data_o
 add wave -noupdate -expand -group Reg_File -label ra -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/ra/data_o
 add wave -noupdate -expand -group Reg_File -label t4 -radix hexadecimal /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/t4/data_o
+add wave -noupdate -expand -group Reg_File -label sp /MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/sp/data_o
 add wave -noupdate -expand -group ALU -radix binary /MIPS_Processor_TB/DUV/ALU_UNIT/alu_operation_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/a_i
 add wave -noupdate -expand -group ALU -radix hexadecimal /MIPS_Processor_TB/DUV/ALU_UNIT/b_i
@@ -45,7 +46,7 @@ add wave -noupdate -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV
 add wave -noupdate -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/data_1_i
 add wave -noupdate -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/result_o
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {29 ps} 0}
+WaveRestoreCursors {{Cursor 1} {58 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 66
@@ -61,4 +62,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {67 ps}
+WaveRestoreZoom {37 ps} {104 ps}

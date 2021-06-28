@@ -13,6 +13,10 @@
 *	05/07/2020
 ******************************************************************/
 module Register_File
+#
+(
+	parameter MEMORY_DEPTH = 32
+)
 (
 	input  clk,
 	input  reset,
@@ -398,6 +402,9 @@ gp
 
 
 Register
+#(
+	.INITIAL_VALUE({32'h1001_0000+MEMORY_DEPTH*4})
+)
 sp
 (
 	.clk(clk),
@@ -422,6 +429,7 @@ fp
 
 
 
+
 Register
 ra
 (
@@ -431,7 +439,6 @@ ra
 	.data_i(write_data_i),
 	.data_o(intercnection_w[32*N_BITS-1:31*N_BITS])
 );
-
 
 
 
