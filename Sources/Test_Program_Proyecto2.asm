@@ -20,12 +20,24 @@ addi	$t0,$t0,10		#
 addi	$t1,$t0,6		#
 continua:
 jal	funcion
-#beq	
-#bne
 j 	exit
 funcion:
 	addi	$t0,$t0,20
 	jr	$ra
 exit:	addi 	$t4,$zero,23
+
+beq	$s5,$s6,continua_mal
+beq	$s5,$s7,continua_bien
+continua_mal:
+	addi $t0,$zero,100
+continua_bien:
+
+bne	$s5,$s7,continua_mal2
+bne	$s5,$zero,exit_2
+continua_mal2:
+	addi $t0,$zero,100	
+exit_2: 	
+	
+#bne
 
 

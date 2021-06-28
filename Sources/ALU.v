@@ -36,8 +36,8 @@ localparam SLL = 4'b0101;
 localparam SRL = 4'b0110;
 localparam AND = 4'b0111;
 localparam NOR = 4'b1000;
-localparam NOTHING = 4'b1001;
-localparam NOTANDPC = 4'b1010;
+localparam NOTHING = 4'b1010;
+localparam NOTANDPC = 4'b1011;
    
    always @ (a_i or b_i or alu_operation_i)
      begin
@@ -68,7 +68,7 @@ localparam NOTANDPC = 4'b1010;
 		endcase // case(control)
 		
 		zero_o = (alu_data_o == 0) ? 1'b1 : 1'b0;
-		topc_o = (alu_operation_i == 4'b1010) ? 1'b1 : 1'b0;
+		topc_o = (alu_operation_i == 4'b1011) ? 1'b1 : 1'b0;
 		
      end // always @ (A or B or control)
 	  

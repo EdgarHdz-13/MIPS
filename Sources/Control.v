@@ -36,9 +36,12 @@ localparam I_TYPE_ORI	= 6'h0d;
 localparam I_TYPE_ANDI	= 6'h0c;
 localparam I_TYPE_SW		= 6'h2b;
 localparam I_TYPE_LW		= 6'h23;
+localparam I_TYPE_BEQ	= 6'h04;
+localparam I_TYPE_BNE	= 6'h05;
 
 localparam J_TYPE_JMP	= 6'h02;
 localparam J_TYPE_JAL	= 6'h03;
+
 
 
 
@@ -56,6 +59,8 @@ always@(opcode_i) begin
 		I_TYPE_ANDI	:	control_values_r = 12'b0_101_00_000_011;
 		I_TYPE_SW	:	control_values_r = 12'b0_010_01_000_101;
 		I_TYPE_LW	:	control_values_r = 12'b0_011_10_000_101; //Para ahorrar FUNCT utilizaré el mismo FUNCT a SW ya que solo cambia el control
+		I_TYPE_BEQ	:	control_values_r = 12'b0_000_00_001_110;
+		I_TYPE_BNE	:	control_values_r = 12'b0_000_00_010_110;
 		
 		J_TYPE_JMP	:	control_values_r = 12'b0_000_00_100_000; //asigne que para hacer un JMP necesitabas tener en 1 branch ne y eq
 		J_TYPE_JAL	:	control_values_r = 12'b0_001_00_100_000;

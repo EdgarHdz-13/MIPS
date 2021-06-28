@@ -38,14 +38,14 @@ add wave -noupdate -group Control /MIPS_Processor_TB/DUV/CONTROL_UNIT/branch_ne_
 add wave -noupdate -expand -group {MUXES FINALES} -label MUX_PC_R_BRANCH_selector /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/selector_i
 add wave -noupdate -expand -group {MUXES FINALES} -label MUX_JMP_R_PC_selector /MIPS_Processor_TB/DUV/MUX_JMP_R_PC/selector_i
 add wave -noupdate -expand -group {MUXES FINALES} -label MUX_REG_TO_PC /MIPS_Processor_TB/DUV/MUX_REG_TO_PC/selector_i
-add wave -noupdate -expand -group MUX_PC_R_BRANCH -radix hexadecimal /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/data_0_i
-add wave -noupdate -expand -group MUX_PC_R_BRANCH -radix hexadecimal /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/data_1_i
-add wave -noupdate -expand -group MUX_PC_R_BRANCH -radix hexadecimal /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/mux_o
-add wave -noupdate -expand -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/data_0_i
-add wave -noupdate -expand -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/data_1_i
-add wave -noupdate -expand -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/result_o
+add wave -noupdate -group MUX_PC_R_BRANCH -radix hexadecimal /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/data_0_i
+add wave -noupdate -group MUX_PC_R_BRANCH -radix hexadecimal /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/data_1_i
+add wave -noupdate -group MUX_PC_R_BRANCH -radix hexadecimal /MIPS_Processor_TB/DUV/MUX_PC_R_BRANCH/mux_o
+add wave -noupdate -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/data_0_i
+add wave -noupdate -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/data_1_i
+add wave -noupdate -group Branch_adder -radix hexadecimal /MIPS_Processor_TB/DUV/BRANCH_ADDER/result_o
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {62 ps} 0}
+WaveRestoreCursors {{Cursor 1} {29 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 66
@@ -61,4 +61,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {37 ps} {104 ps}
+WaveRestoreZoom {0 ps} {67 ps}

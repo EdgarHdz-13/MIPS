@@ -27,7 +27,7 @@
 
 module MIPS_Processor
 #(
-	parameter MEMORY_DEPTH = 32
+	parameter MEMORY_DEPTH = 256
 )
 (
 	// Inputs
@@ -54,11 +54,13 @@ wire [2:0] alu_op_w;
 wire [3:0] alu_operation_w;
 wire [4:0] write_mux_w;
 wire [4:0] write_register_w;
-
+wire [31:0] mux_pc_r_branch_w;
 wire [31:0] pc_w;
 //wire [31:0] pc_erl2_w;
 //wire [31:0] pc_jmp_adder_w;
 wire [27:0] pc_jmp_w;
+wire [27:0] branch_shifter_left_2_w;
+wire [31:0] branch_adder_w;
 wire [31:0] new_pc_w;
 wire [31:0] mux_jmp_r_pc_w;
 wire [31:0] instruction_w;
@@ -129,14 +131,14 @@ PC_Puls_4
 	.result_o(pc_plus_4_w)
 );
 
-Adder
+/*Adder
 PC_Puls_8
 (
 	.data_0_i(pc_w),
 	.data_1_i(32'h4),
 	
 	.result_o(pc_plus_8_w)
-);
+);*/
 
 //******************************************************************/
 //******************************************************************/
@@ -204,7 +206,7 @@ Multiplexer_2_to_1
 MUX_JMP_R_PC
 (
 	.selector_i(jmp_w),
-	.data_0_i(pc_plus_4_w),
+	.data_0_i(mux_pc_r_branch_w),
 	.data_1_i({pc_plus_4_w[31:28],pc_jmp_w[27:0]}),
 	
 	.mux_o(mux_jmp_r_pc_w)
@@ -231,7 +233,7 @@ MUX_REGISTER_WRITE_DATA_JAL
 (
 	.selector_i(jmp_w),
 	.data_0_i(read_data_mmry_r_alu_w),
-	.data_1_i(pc_plus_8_w),
+	.data_1_i(pc_plus_4_w),
 	
 	.mux_o(write_data_w)
 );
@@ -262,6 +264,36 @@ MUX_REG_TO_PC
 	.mux_o(new_pc_w)
 );
 
+Shift_Left_2
+BRANCH_SHIFTER_LEFT_2
+(
+	.data_i(inmmediate_extend_w),
+   .data_o(branch_shifter_left_2_w)
+);
+
+
+Adder
+BRANCH_ADDER
+(
+	.data_0_i(pc_plus_4_w),
+	.data_1_i({5'h0,branch_shifter_left_2_w}),
+	
+	.result_o(branch_adder_w[31:0])
+);
+
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_PC_R_BRANCH
+(
+	.selector_i(branch_ne_w && ~(zero_w) || branch_eq_w && zero_w),
+	.data_0_i(pc_plus_4_w),
+	.data_1_i(branch_adder_w),
+	
+	.mux_o(mux_pc_r_branch_w)
+);
+
 ALU_Control
 ALU_CTRL
 (
@@ -270,7 +302,6 @@ ALU_CTRL
 	.alu_operation_o(alu_operation_w)
 
 );
-
 
 
 ALU
@@ -291,7 +322,7 @@ assign alu_result_o = alu_result_w;
 Data_Memory
 #(	
 	.DATA_WIDTH(32),
-	.MEMORY_DEPTH(256)
+	.MEMORY_DEPTH(MEMORY_DEPTH)
 )
 DATA_MMRY
 (
