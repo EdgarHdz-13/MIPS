@@ -49,20 +49,20 @@ wire mem_write_w;
 wire mem_read_w;
 wire mem_to_reg_w;
 wire jmp_w;
-//wire PC_SRC_w;
+
 wire [2:0] alu_op_w;
 wire [3:0] alu_operation_w;
 wire [4:0] write_mux_w;
 wire [4:0] write_register_w;
 wire [31:0] mux_pc_r_branch_w;
 wire [31:0] pc_w;
-//wire [31:0] pc_erl2_w;
-//wire [31:0] pc_jmp_adder_w;
 wire [27:0] pc_jmp_w;
 wire [27:0] branch_shifter_left_2_w;
 wire [31:0] branch_adder_w;
 wire [31:0] new_pc_w;
+wire [31:0] pipeline_new_pc_w;
 wire [31:0] mux_jmp_r_pc_w;
+wire [31:0] pipe_instruction_w;
 wire [31:0] instruction_w;
 wire [31:0] read_data_1_w;
 wire [31:0] read_data_2_w;
@@ -71,7 +71,7 @@ wire [31:0] read_ata_2_r_nmmediate_w;
 wire [31:0] write_data_w;
 wire [31:0] alu_result_w;
 wire [31:0] pc_plus_4_w;
-wire [31:0] pc_plus_8_w;
+wire [31:0] pipe_pc_plus_4_w;
 wire [31:0] read_data_mmry_w;
 wire [31:0] read_data_mmry_r_alu_w;
 
@@ -115,7 +115,7 @@ Program_Memory
 ROM
 (
 	.address_i(pc_w),
-	.instruction_o(instruction_w)
+	.instruction_o(pipe_instruction_w)
 );
 
 
@@ -123,12 +123,12 @@ ROM
 
 
 Adder
-PC_Puls_4
+PC_Pulls_4
 (
 	.data_0_i(pc_w),
 	.data_1_i(32'h4),
 	
-	.result_o(pc_plus_4_w)
+	.result_o(pipe_pc_plus_4_w)
 );
 
 /*Adder
@@ -189,18 +189,10 @@ SIGNED_EXTEND_FOR_CONSTANTS
 Shift_Left_2
 JMP_SHIFTER
 (
-	.data_i(instruction_w[25:0]),
+	.data_i({6'h0,instruction_w[25:0]}),
    .data_o(pc_jmp_w)
 
 );
-/*Adder
-JMP_ADDER
-(
-	.data_0_i(pc_plus_4_w),
-	.data_1_i(pc_shifterl2_w),
-	
-	.result_o(pc_jmp_adder_w)
-);*/
 
 Multiplexer_2_to_1
 #(
@@ -264,7 +256,7 @@ MUX_REG_TO_PC
 	.data_0_i(mux_jmp_r_pc_w),
 	.data_1_i(alu_result_w),
 	
-	.mux_o(new_pc_w)
+	.mux_o(pipeline_new_pc_w_w)
 );
 
 Shift_Left_2
@@ -349,6 +341,34 @@ MUX_READ_DATA_MEMORY_r_ALU
 	.mux_o(read_data_mmry_r_alu_w)
 
 );
+
+Pipeline_Register_IFID
+#(
+	.MEMORY_DEPTH(MEMORY_DEPTH)
+)
+REGISTER_IF_ID
+(
+	.clk(clk),
+	.reset(reset),
+	.pc_i(pipe_pc_plus_4_w),
+	.instr_i(pipe_instruction_w),
+	.pc_o(pc_plus_4_w),
+	.instr_o(instruction_w)
+);
+
+Multiplexer_2_to_1
+#(
+	.N_BITS(32)
+)
+MUX_PIPELINE_R_BRNCH
+(
+	.selector_i(Topc_w || jmp_w || branch_ne_w && ~(zero_w) || branch_eq_w && zero_w),
+	.data_0_i(pipe_pc_plus_4_w),
+	.data_1_i(instruction_w),
+	.mux_o(new_pc_w)
+
+);
+
 
 endmodule
 

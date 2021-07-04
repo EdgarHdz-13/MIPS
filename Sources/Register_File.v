@@ -495,7 +495,7 @@ MUXRegister2
 (
 	.selector_i(read_register_2_i),
 
-		.data_0_i(intercnection_w[1*N_BITS-1:0*N_BITS]),
+	.data_0_i(intercnection_w[1*N_BITS-1:0*N_BITS]),
 	.data_1_i(intercnection_w[2*N_BITS-1:1*N_BITS]),
 	.data_2_i(intercnection_w[3*N_BITS-1:2*N_BITS]),
 	.data_3_i(intercnection_w[4*N_BITS-1:3*N_BITS]),

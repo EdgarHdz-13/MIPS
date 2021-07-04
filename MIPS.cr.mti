@@ -26,7 +26,21 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Control
 
-} {} {}} C:/MIPS/Sources/Data_Memory.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Data_Memory.v
+} {} {}} C:/MIPS/Sources/Pipeline_Register.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Pipeline_Register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Pipeline_register
+
+Top level modules:
+	Pipeline_register
+
+} {} {}} C:/MIPS/Sources/ALU.v {1 {vlog -work work -stats=none C:/MIPS/Sources/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/MIPS/Sources/Data_Memory.v {1 {vlog -work work -stats=none {C:\MIPS\Sources\Data_Memory.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Data_Memory
 
@@ -39,6 +53,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	Register_File
+
+} {} {}} C:/MIPS/Sources/Pipeline_Register_IFID.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Pipeline_Register_IFID.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Pipeline_Register_IFID
+
+Top level modules:
+	Pipeline_Register_IFID
 
 } {} {}} C:/MIPS/Sources/Register.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Register.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -61,13 +82,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Program_Memory
 
-} {} {}} C:/MIPS/Sources/MIPS_Processor.v {1 {vlog -work work -stats=none C:/MIPS/Sources/MIPS_Processor.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MIPS_Processor
-
-Top level modules:
-	MIPS_Processor
-
 } {} {}} C:/MIPS/Sources/Adder.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Adder.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Adder
@@ -82,19 +96,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Sign_Extend
 
-} {} {}} C:/MIPS/Sources/Decoder_Register_File.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Decoder_Register_File.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Decoder_Register_File
-
-Top level modules:
-	Decoder_Register_File
-
 } {} {}} C:/MIPS/Sources/Shift_Left_2.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Shift_Left_2.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Shift_Left_2
 
 Top level modules:
 	Shift_Left_2
+
+} {} {}} C:/MIPS/Sources/Decoder_Register_File.v {1 {vlog -work work -stats=none {C:\MIPS\Sources\Decoder_Register_File.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Decoder_Register_File
+
+Top level modules:
+	Decoder_Register_File
 
 } {} {}} C:/MIPS/Sources/ALU_Control.v {1 {vlog -work work -stats=none C:/MIPS/Sources/ALU_Control.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

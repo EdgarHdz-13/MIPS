@@ -1,0 +1,49 @@
+
+module Pipeline_Register_File
+#
+(
+	parameter MEMORY_DEPTH = 32
+)
+(
+	input  clk,
+	input  reset,
+	input 			reg_write_i,
+	input  [4:0] 	write_register_i,
+	input  [4:0] 	read_register_1_i,
+	input  [4:0] 	read_register_2_i,
+	input  [31:0] 	write_data_i,
+	
+	output [31:0] 	read_data_1_o,
+	output [31:0] 	read_data_2_o
+
+);
+
+localparam N_BITS = 32;
+
+
+wire [32*N_BITS - 1 : 0]intercnection_w;
+wire [31:0] select_register_w;
+
+
+Decoder_Register_File
+DECODER_REG_FILE
+(
+	.write_register_i(write_register_i),
+	.select_register_o(select_register_w)
+);
+
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+/****************************************************************/
+
+Pipeline_Register
+Zero
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(select_register_w[0]&reg_write_i),
+	.data_i(0),
+	.data_o(intercnection_w[N_BITS - 1 : 0])
+);
