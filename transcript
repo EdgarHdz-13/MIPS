@@ -14,99 +14,13 @@
 # Compile of Register_File.v was successful.
 # Compile of Shift_Left_2.v was successful.
 # Compile of Sign_Extend.v was successful.
-# 16 compiles, 0 failed with no errors.
-vsim -gui work.MIPS_Processor_TB
-# vsim -gui work.MIPS_Processor_TB 
-# Start time: 14:03:33 on Jul 04,2021
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.Shift_Left_2
-# Loading work.ALU_Control
-# Loading work.ALU
-# Loading work.Data_Memory
-# ** Error: (vsim-3033) Instantiation of 'Pipeline_Register_IFID' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: C:/MIPS/Sources/MIPS_Processor.v Line: 348
-#         Searched libraries:
-#             C:/MIPS/work
-# Error loading design
-# End time: 14:03:35 on Jul 04,2021, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 2
-vsim -gui work.MIPS_Processor_TB
-# vsim -gui work.MIPS_Processor_TB 
-# Start time: 14:03:51 on Jul 04,2021
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.Shift_Left_2
-# Loading work.ALU_Control
-# Loading work.ALU
-# Loading work.Data_Memory
-# ** Error: (vsim-3033) Instantiation of 'Pipeline_Register_IFID' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: C:/MIPS/Sources/MIPS_Processor.v Line: 348
-#         Searched libraries:
-#             C:/MIPS/work
-# Error loading design
-# End time: 14:03:51 on Jul 04,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 1
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# 16 compiles, 0 failed with no errors.
-# Load canceled
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
 # Compile of Pipeline_Register.v was successful.
 # Compile of Pipeline_Register_IFID.v was successful.
-# 18 compiles, 0 failed with no errors.
+# Compile of Pipeline_Register_IDEX.v was successful.
+# 19 compiles, 0 failed with no errors.
 vsim -gui work.MIPS_Processor_TB
 # vsim -gui work.MIPS_Processor_TB 
-# Start time: 14:10:45 on Jul 04,2021
+# Start time: 12:32:18 on Jul 05,2021
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -125,302 +39,370 @@ vsim -gui work.MIPS_Processor_TB
 # Loading work.Data_Memory
 # Loading work.Pipeline_Register_IFID
 # Loading work.Pipeline_register
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
+# Loading work.Pipeline_Register_IDEX
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 282
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 290
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-do C:/MIPS/Sources/PROYECTO_wave.do
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/PC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_1 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/INMEDIATE_EXTEND File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 177
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 282
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 290
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/PC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_1 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/INMEDIATE_EXTEND File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 177
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+do C:/MIPS/Sources/MIPS_pipeline_wave.do
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: edgar  Hostname: DESKTOP-3AAO4Q2  ProcessID: 14776
-#           Attempting to use alternate WLF file "./wlftq0xxa4".
+#           Attempting to use alternate WLF file "./wlftq64qak".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftq0xxa4
-# ** UI-Msg: (vish-4014) No objects found matching '/MIPS_Processor_TB/DUV/PC_Puls_4/result_o'.
-# Executing ONERROR command at macro C:\MIPS\Sources\PROYECTO_wave.do line 119
+#           Using alternate file: ./wlftq64qak
 run
-add wave -position 3  sim:/MIPS_Processor_TB/DUV/PC/pc_value_o
+add wave -position 7  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/pc_i
+add wave -position 7  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/pc_o
+add wave -position 7  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/instr_i
+add wave -position 10  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/instr_i
+add wave -position 10  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/instr_o
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 282
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 290
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/PC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_1 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 138
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/INMEDIATE_EXTEND File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 177
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
 run
-do C:/MIPS/Sources/MIPS_wave.do
-do C:/MIPS/Sources/MIPS_wave.do
+add wave -position end  sim:/MIPS_Processor_TB/DUV/REGISTER_FILE_UNIT/s0/data_o
 restart
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 233
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 282
 # ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 290
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_NE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 49
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-run
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/BRANCH_EQ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 58
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 68
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-run
-add wave -position 8  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/pc_i
-add wave -position 9  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/instr_i
-add wave -position 10  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/pc_o
-add wave -position 11  sim:/MIPS_Processor_TB/DUV/REGISTER_IF_ID/instr_o
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_WRITE File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 78
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_READ File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 88
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-run
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# Compile of Pipeline_Register.v was successful.
-# Compile of Pipeline_Register_IFID.v was successful.
-# 18 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.Shift_Left_2
-# Loading work.ALU_Control
-# Loading work.ALU
-# Loading work.Data_Memory
-# Loading work.Pipeline_Register_IFID
-# Loading work.Pipeline_register
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 189
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 213
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 262
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 270
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_SRC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 98
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/JMP_SHIFTER_l_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 108
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-run
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# Compile of Pipeline_Register.v was successful.
-# Compile of Pipeline_Register_IFID.v was successful.
-# 18 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.Shift_Left_2
-# Loading work.ALU_Control
-# Loading work.ALU
-# Loading work.Data_Memory
-# Loading work.Pipeline_Register_IFID
-# Loading work.Pipeline_register
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 190
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 214
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 214
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 214
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_REG_TO_PC File: C:/MIPS/Sources/MIPS_Processor.v Line: 253
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 263
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 271
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/PC File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 118
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_1 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 128
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
-run
-# Compile of Adder.v was successful.
-# Compile of ALU.v was successful.
-# Compile of ALU_Control.v was successful.
-# Compile of Control.v was successful.
-# Compile of Data_Memory.v was successful.
-# Compile of Decoder_Register_File.v was successful.
-# Compile of MIPS_Processor.v was successful.
-# Compile of MIPS_Processor_TB.v was successful.
-# Compile of Multiplexer_2_to_1.v was successful.
-# Compile of Mux_Register_File.v was successful.
-# Compile of Program_Counter.v was successful.
-# Compile of Program_Memory.v was successful.
-# Compile of Register.v was successful.
-# Compile of Register_File.v was successful.
-# Compile of Shift_Left_2.v was successful.
-# Compile of Sign_Extend.v was successful.
-# Compile of Pipeline_Register.v was successful.
-# Compile of Pipeline_Register_IFID.v was successful.
-# 18 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.MIPS_Processor_TB
-# Loading work.MIPS_Processor
-# Loading work.Control
-# Loading work.Program_Counter
-# Loading work.Program_Memory
-# Loading work.Adder
-# Loading work.Multiplexer_2_to_1
-# Loading work.Register_File
-# Loading work.Decoder_Register_File
-# Loading work.Register
-# Loading work.Mux_Register_File
-# Loading work.Sign_Extend
-# Loading work.Shift_Left_2
-# Loading work.ALU_Control
-# Loading work.ALU
-# Loading work.Data_Memory
-# Loading work.Pipeline_Register_IFID
-# Loading work.Pipeline_register
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JMP_SHIFTER File: C:/MIPS/Sources/MIPS_Processor.v Line: 190
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_0_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 214
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 214
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_WRITE_REGISTER_JAL File: C:/MIPS/Sources/MIPS_Processor.v Line: 214
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'mux_o'. The port definition is at: C:/MIPS/Sources/Multiplexer_2_to_1.v(22).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/MUX_REG_TO_PC File: C:/MIPS/Sources/MIPS_Processor.v Line: 253
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (28) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Shift_Left_2.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_SHIFTER_LEFT_2 File: C:/MIPS/Sources/MIPS_Processor.v Line: 263
-# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (33) for port 'data_1_i'. The port definition is at: C:/MIPS/Sources/Adder.v(20).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/BRANCH_ADDER File: C:/MIPS/Sources/MIPS_Processor.v Line: 271
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/READ_DATA_2 File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 138
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/PC File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 20
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/SHAMT File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 148
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_IF_ID/INSTR File: C:/MIPS/Sources/Pipeline_Register_IFID.v Line: 30
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (4) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/ALU_CTRL File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/MEM_TO_REG File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 168
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/INMEDIATE_EXTEND File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 177
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_i'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'data_o'. The port definition is at: C:/MIPS/Sources/Pipeline_Register.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/REGISTER_ID_EX/WRITE_REGISTER File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 186
 run

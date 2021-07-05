@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at Program_Counter.v(30): always construct contains both blocking and non-blocking assignments File: C:/MIPS/Sources/Program_Counter.v Line: 30
+Info (10281): Verilog HDL Declaration information at Pipeline_Register_IDEX.v(15): object "mem_to_reg" differs only in case from object "MEM_TO_REG" in the same scope File: C:/MIPS/Sources/Pipeline_Register_IDEX.v Line: 15

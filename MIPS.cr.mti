@@ -40,7 +40,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	ALU
 
-} {} {}} C:/MIPS/Sources/Data_Memory.v {1 {vlog -work work -stats=none {C:\MIPS\Sources\Data_Memory.v}
+} {} {}} C:/MIPS/Sources/Data_Memory.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Data_Memory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Data_Memory
 
@@ -75,6 +75,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MIPS_Processor_TB
 
+} {} {}} C:/MIPS/Sources/MIPS_Processor.v {1 {vlog -work work -stats=none C:/MIPS/Sources/MIPS_Processor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MIPS_Processor
+
+Top level modules:
+	MIPS_Processor
+
 } {} {}} C:/MIPS/Sources/Program_Memory.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Program_Memory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Program_Memory
@@ -103,7 +110,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Shift_Left_2
 
-} {} {}} C:/MIPS/Sources/Decoder_Register_File.v {1 {vlog -work work -stats=none {C:\MIPS\Sources\Decoder_Register_File.v}
+} {} {}} C:/MIPS/Sources/Decoder_Register_File.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Decoder_Register_File.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Decoder_Register_File
 
