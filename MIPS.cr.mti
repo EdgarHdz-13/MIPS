@@ -47,6 +47,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Data_Memory
 
+} {} {}} C:/MIPS/Sources/Pipeline_Register_IDEX.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Pipeline_Register_IDEX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Pipeline_Register_IDEX
+
+Top level modules:
+	Pipeline_Register_IDEX
+
 } {} {}} C:/MIPS/Sources/Register_File.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Register_File.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Register_File

@@ -46,6 +46,7 @@ wire pipe_alu_src_w;
 wire reg_write_w;
 wire pipe_reg_write_w;
 wire pipe2_reg_write_w;
+wire pipe3_reg_write_w;
 wire zero_w;
 wire topc_w;
 wire pipe_topc_w;
@@ -58,6 +59,7 @@ wire pipe2_mem_read_w;
 wire mem_to_reg_w;
 wire pipe_mem_to_reg_w;
 wire pipe2_mem_to_reg_w;
+wire pipe3_mem_to_reg_w;
 wire jmp_w;
 wire pipe_jmp_w;
 wire pipe2_jmp_w;
@@ -73,6 +75,7 @@ wire [4:0] write_mux_w;
 wire [4:0] write_register_w;
 wire [4:0] pipe_write_register_w;
 wire [4:0] pipe2_write_register_w;
+wire [4:0] pipe3_write_register_w;
 wire [10:6] shamt_w;
 wire [31:0] mux_pc_r_branch_w;
 wire [31:0] pipe_mux_pc_r_branch_w;
@@ -97,12 +100,14 @@ wire [31:0] read_ata_2_r_nmmediate_w;
 wire [31:0] write_data_w;
 wire [31:0] alu_result_w;
 wire [31:0] pipe_alu_result_w;
+wire [31:0] pipe2_alu_result_w;
 wire [31:0] pc_plus_4_w;
 wire [31:0] pipe_pc_plus_4_w;
 wire [31:0] pipe2_pc_plus_4_w;
 wire [31:0] pipe3_pc_plus_4_w;
-wire [31:0] pipeIDEX_pc_plus_4_w;
+wire [31:0] pipe4_pc_plus_4_w;
 wire [31:0] read_data_mmry_w;
+wire [31:0] pipe_read_data_mmry_w;
 wire [31:0] read_data_mmry_r_alu_w;
 wire [31:0] jmp_shifter_plus_pc_w;
 
@@ -281,7 +286,7 @@ MUX_REG_TO_PC
 (
 	.selector_i(topc_w),
 	.data_0_i(mux_jmp_r_pc_w),
-	.data_1_i(alu_result_w),
+	.data_1_i(pipe2_alu_result_w),
 	
 	.mux_o(pipeline_new_pc_w)
 );
@@ -349,11 +354,11 @@ Data_Memory
 DATA_MMRY
 (
 	.write_data_i(read_data_2_w),
-	.address_i(alu_result_w),
+	.address_i(pipe2_alu_result_w),
 	.mem_write_i(mem_write_w),
 	.mem_read_i(mem_read_w), 
 	.clk(clk),
-	.data_o(read_data_mmry_w)
+	.data_o(pipe_read_data_mmry_w)
 );
 
 Multiplexer_2_to_1
@@ -475,16 +480,45 @@ REGISTER_EX_MEM
 	
 	.topc_o(topc_w),
 	.jmp_o(jmp_w),
-	.mem_to_reg_o(mem_to_reg_w),
+	.mem_to_reg_o(pipe3_mem_to_reg_w),
 	.mem_read_o(mem_read_w),
 	.mem_write_o(mem_write_w),
-	.alu_result_o(alu_result_w),
+	.alu_result_o(pipe2_alu_result_w),
 	.read_data_2_o(read_data_2_w),
 	.mux_pc_r_branch_o(mux_pc_r_branch_w),
 	.jmp_shifter_plus_pc_o(jmp_shifter_plus_pc_w),
-	.pc_plus_4_o(pc_plus_4_w),
+	.pc_plus_4_o(pipe4_pc_plus_4_w),
+	.write_register_o(pipe3_write_register_w),
+	.reg_write_o(pipe3_reg_write_w)
+
+);
+
+Pipeline_Register_MEMWB
+#(
+	.MEMORY_DEPTH(MEMORY_DEPTH)
+)
+REGISTER_MEM_WB
+(
+
+	.clk(clk),
+	.reset(reset),
+	
+	.mem_to_reg_i(pipe3_mem_to_reg_w),
+	.reg_write_i(pipe3_reg_write_w),
+	.write_register_i(pipe3_write_register_w),
+	.pc_plus_4_i(pipe4_pc_plus_4_w),
+	.read_data_mmry_i(pipe_read_data_mmry_w),
+	.alu_result_i(pipe2_alu_result_w),
+	
+	
+	////////////////////////////////
+	
+	.mem_to_reg_o(mem_to_reg_w),
+	.reg_write_o(reg_write_w),
 	.write_register_o(write_register_w),
-	.reg_write_o(reg_write_w)
+	.pc_plus_4_o(pc_plus_4_w),
+	.read_data_mmry_o(read_data_mmry_w),
+	.alu_result_o(alu_result_w)
 
 );
 

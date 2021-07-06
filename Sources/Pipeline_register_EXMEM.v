@@ -29,7 +29,7 @@ module Pipeline_Register_EXMEM
 	output  mem_to_reg_o,
 	output  mem_read_o,
 	output  mem_write_o,
-	output reg_write_o,
+	output  reg_write_o,
 	output  [4:0]write_register_o,
 	output  [31:0]alu_result_o,
 	output  [31:0]read_data_2_o,
