@@ -16,6 +16,7 @@ module Pipeline_Register_IDEX
 	input  mem_write_i,
 	input  mem_read_i,
 	input  alu_src_i,
+	input  reg_write_i,
 	input	 [31:0]  jmp_shifter_i,
 	input	 [31:0]	pc_i,
 	input  [31:0]  read_data_1_i,
@@ -34,6 +35,7 @@ module Pipeline_Register_IDEX
 	output mem_write_o,
 	output mem_read_o,
 	output alu_src_o,
+	output reg_write_o,
 	output [27:0]  jmp_shifter_o,
 	output [31:0]	pc_o,
 	output [31:0]  read_data_1_o,
@@ -173,6 +175,7 @@ MEM_TO_REG
 	.data_i(mem_to_reg_i),
 	.data_o(mem_to_reg_o)
 );
+
 Pipeline_register
 INMEDIATE_EXTEND
 (
@@ -182,6 +185,7 @@ INMEDIATE_EXTEND
 	.data_i(inmmediate_extend_i),
 	.data_o(inmmediate_extend_o)
 );
+
 Pipeline_register
 WRITE_REGISTER
 (
@@ -191,4 +195,15 @@ WRITE_REGISTER
 	.data_i(write_register_i),
 	.data_o(write_register_o)
 );
+
+Pipeline_register
+REG_WRITE
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(reg_write_i),
+	.data_o(reg_write_o)
+);
+
 endmodule

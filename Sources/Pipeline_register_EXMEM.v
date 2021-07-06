@@ -14,11 +14,13 @@ module Pipeline_Register_EXMEM
 	input  mem_to_reg_i,
 	input  mem_read_i,
 	input  mem_write_i,
+	input  reg_write_i,
+	input  [4:0]write_register_i,
 	input  [31:0]alu_result_i,
 	input  [31:0]read_data_2_i,
 	input	 [31:0]mux_pc_r_branch_i,
-	input	 [31:0]mux_jmp_r_pc_data_1_i,
 	input  [31:0]pc_plus_4_i,
+	input  [31:0]jmp_shifter_plus_pc_i,
 	
 	////////////////////////////////////
 	
@@ -27,12 +29,13 @@ module Pipeline_Register_EXMEM
 	output  mem_to_reg_o,
 	output  mem_read_o,
 	output  mem_write_o,
+	output reg_write_o,
+	output  [4:0]write_register_o,
 	output  [31:0]alu_result_o,
 	output  [31:0]read_data_2_o,
 	output  [31:0]mux_pc_r_branch_o,
-	output  [31:0]mux_jmp_r_pc_data_1_o,
-	output  [31:0]pc_plus_4_o
-	
+	output  [31:0]pc_plus_4_o,
+	output  [31:0]jmp_shifter_plus_pc_o
 	
 
 );
@@ -119,16 +122,6 @@ MUX_PC_R_BRANCH
 );
 
 Pipeline_register
-MUX_JMP_R_PC_DATA_1
-(
-	.clk(clk),
-	.reset(reset),
-	.enable(1),
-	.data_i(mux_jmp_r_pc_data_1_i),
-	.data_o(mux_jmp_r_pc_data_1_o)
-);
-
-Pipeline_register
 PC_PLUS_4
 (
 	.clk(clk),
@@ -138,4 +131,33 @@ PC_PLUS_4
 	.data_o(pc_plus_4_o)
 );
 
+Pipeline_register
+JMP_SHIFTER_PLUS_PC_I
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(jmp_shifter_plus_pc_i),
+	.data_o(jmp_shifter_plus_pc_o)
+);
+
+Pipeline_register
+WRITE_REGISTER
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(write_register_i),
+	.data_o(write_register_o)
+);
+
+Pipeline_register
+REG_WRITE
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(reg_write_i),
+	.data_o(reg_write_o)
+);
 endmodule
