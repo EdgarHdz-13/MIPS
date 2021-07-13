@@ -16,11 +16,13 @@ module Pipeline_Register_EXMEM
 	input  mem_write_i,
 	input  reg_write_i,
 	input  [4:0]write_register_i,
+	input  [4:0] Rd_i,
 	input  [31:0]alu_result_i,
 	input  [31:0]read_data_2_i,
 	input	 [31:0]mux_pc_r_branch_i,
 	input  [31:0]pc_plus_4_i,
 	input  [31:0]jmp_shifter_plus_pc_i,
+	
 	
 	////////////////////////////////////
 	
@@ -30,13 +32,13 @@ module Pipeline_Register_EXMEM
 	output  mem_read_o,
 	output  mem_write_o,
 	output  reg_write_o,
-	output  [4:0]write_register_o,
-	output  [31:0]alu_result_o,
-	output  [31:0]read_data_2_o,
-	output  [31:0]mux_pc_r_branch_o,
-	output  [31:0]pc_plus_4_o,
-	output  [31:0]jmp_shifter_plus_pc_o
-	
+	output  [4:0] write_register_o,
+	output  [4:0] Rd_o,
+	output  [31:0] alu_result_o,
+	output  [31:0] read_data_2_o,
+	output  [31:0] mux_pc_r_branch_o,
+	output  [31:0] pc_plus_4_o,
+	output  [31:0] jmp_shifter_plus_pc_o
 
 );
 
@@ -160,4 +162,16 @@ REG_WRITE
 	.data_i(reg_write_i),
 	.data_o(reg_write_o)
 );
+
+
+Pipeline_register
+RD
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(Rd_i),
+	.data_o(Rd_o)
+);
+
 endmodule

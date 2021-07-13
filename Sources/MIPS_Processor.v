@@ -67,8 +67,23 @@ wire branch_ne_w;
 wire pipe_branch_ne_w;
 wire branch_eq_w;
 wire pipe_branch_eq_w;
+wire IFID_disenabler_w;
+wire PC_disenabler_w;
+wire control_zero_mux_w;
+wire swtch_reg_dst_w;
+wire swtch_pipe_branch_ne_w;
+wire swtch_pipe_branch_eq_w;
+wire swtch_pipe_alu_src_w;
+wire swtch_pipe_reg_write_w;
+wire swtch_pipe_mem_read_w;
+wire swtch_pipe_mem_write_w;
+wire swtch_pipe_mem_to_reg_w;
+wire swtch_pipe_jmp_w;
 
 wire [2:0] alu_op_w;
+wire [2:0] swtch_alu_op_w;
+wire [2:0] sel_forward_a_w;
+wire [2:0] sel_forward_b_w;
 wire [3:0] alu_operation_w;
 wire [3:0] pipe_alu_operation_w;
 wire [4:0] write_mux_w;
@@ -76,6 +91,11 @@ wire [4:0] write_register_w;
 wire [4:0] pipe_write_register_w;
 wire [4:0] pipe2_write_register_w;
 wire [4:0] pipe3_write_register_w;
+wire [5:0] Rs_IDEX_w;
+wire [5:0] Rt_IDEX_w;
+wire [5:0] Rd_IDEX_w;
+wire [5:0] Rd_EXMEM_w;
+wire [5:0] Rd_MEMWB_w;
 wire [10:6] shamt_w;
 wire [31:0] mux_pc_r_branch_w;
 wire [31:0] pipe_mux_pc_r_branch_w;
@@ -90,6 +110,8 @@ wire [31:0] mux_jmp_r_pc_w;
 wire [31:0] pipe_instruction_w;
 wire [31:0] instruction_w;
 wire [31:0] read_data_1_w;
+wire [31:0] mux_o_rdata_1_idex_r_exmem_r_memwb_w;
+wire [31:0] mux_o_rdata_2_idex_r_exmem_r_memwb_w;
 wire [31:0] pipe_read_data_1_w;
 wire [31:0] read_data_2_w;
 wire [31:0] pipe_read_data_2_w;
@@ -110,8 +132,6 @@ wire [31:0] read_data_mmry_w;
 wire [31:0] pipe_read_data_mmry_w;
 wire [31:0] read_data_mmry_r_alu_w;
 wire [31:0] jmp_shifter_plus_pc_w;
-
-
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
@@ -121,16 +141,17 @@ Control
 CONTROL_UNIT
 (
 	.opcode_i(instruction_w[31:26]),
-	.reg_dst_o(reg_dst_w),
-	.branch_ne_o(pipe_branch_ne_w),
-	.branch_eq_o(pipe_branch_eq_w),
-	.alu_op_o(alu_op_w),
-	.alu_src_o(pipe_alu_src_w),
-	.reg_write_o(pipe_reg_write_w),
-	.mem_read_o(pipe_mem_read_w),
-	.mem_write_o(pipe_mem_write_w),
-	.mem_to_reg_o(pipe_mem_to_reg_w),
-	.jmp_o(pipe_jmp_w)
+	
+	.reg_dst_o(swtch_reg_dst_w),
+	.branch_ne_o(swtch_pipe_branch_ne_w),
+	.branch_eq_o(swtch_pipe_branch_eq_w),
+	.alu_op_o(swtch_alu_op_w),
+	.alu_src_o(swtch_pipe_alu_src_w),
+	.reg_write_o(swtch_pipe_reg_write_w),
+	.mem_read_o(swtch_pipe_mem_read_w),
+	.mem_write_o(swtch_pipe_mem_write_w),
+	.mem_to_reg_o(swtch_pipe_mem_to_reg_w),
+	.jmp_o(swtch_pipe_jmp_w)
 );
 
 Program_Counter
@@ -139,7 +160,8 @@ PC
 	.clk(clk),
 	.reset(reset),
 	.new_pc_i(new_pc_w),
-	.pc_value_o(pc_w)
+	.pc_value_o(pc_w),
+	.enabler_i(PC_disenabler_w)
 );
 
 Program_Memory
@@ -271,7 +293,7 @@ Multiplexer_2_to_1
 MUX_READ_DATA_2_OR_IMMEDIATE
 (
 	.selector_i(alu_src_w),
-	.data_0_i(pipe2_read_data_2_w),
+	.data_0_i(mux_o_rdata_2_idex_r_exmem_r_memwb_w),
 	.data_1_i(inmmediate_extend_w),
 	
 	.mux_o(read_ata_2_r_nmmediate_w)
@@ -335,7 +357,7 @@ ALU
 ALU_UNIT
 (
 	.alu_operation_i(alu_operation_w),
-	.a_i(read_data_1_w),
+	.a_i(mux_o_rdata_1_idex_r_exmem_r_memwb_w),
 	.b_i(read_ata_2_r_nmmediate_w),
 	.shamt_i(shamt_w),
 	.zero_o(zero_w),
@@ -386,6 +408,7 @@ REGISTER_IF_ID
 	
 	.pc_i(pipe_pc_plus_4_w),
 	.instr_i(pipe_instruction_w),
+	.reg_enabler(IFID_disenabler_w),
 	
 	////////////////
 	.pc_o(pipe2_pc_plus_4_w),
@@ -431,6 +454,9 @@ REGISTER_ID_EX
 	.inmmediate_extend_i(pipe_inmmediate_extend_w),
 	.write_register_i(pipe_write_register_w),
 	.reg_write_i(pipe_reg_write_w),
+	.Rs_i(instruction_w[25:21]),
+	.Rt_i(instruction_w[20:16]),
+	.Rd_i(pipe_write_register_w),
 	
 	/////////////////////////////////////
 	
@@ -449,7 +475,10 @@ REGISTER_ID_EX
 	.alu_ctrl_o(alu_operation_w),
 	.inmmediate_extend_o(inmmediate_extend_w),
 	.write_register_o(pipe2_write_register_w),
-	.reg_write_o(pipe2_reg_write_w)
+	.reg_write_o(pipe2_reg_write_w),
+	.Rs_o(Rs_IDEX_w),
+	.Rt_o(Rt_IDEX_w),
+	.Rd_o(Rd_IDEX_w)
 );
 
 Pipeline_Register_EXMEM
@@ -466,8 +495,8 @@ REGISTER_EX_MEM
 	.topc_i(pipe_topc_w),
 	.jmp_i(pipe2_jmp_w),
 	.mem_to_reg_i(pipe2_mem_to_reg_w),
-	.mem_read_i(pipe2_mem_write_w),
-	.mem_write_i(pipe2_mem_read_w),
+	.mem_read_i(pipe2_mem_read_w),
+	.mem_write_i(pipe2_mem_write_w),
 	.alu_result_i(pipe_alu_result_w),
 	.read_data_2_i(pipe2_read_data_2_w),
 	.mux_pc_r_branch_i(pipe_mux_pc_r_branch_w),
@@ -475,6 +504,7 @@ REGISTER_EX_MEM
 	.pc_plus_4_i(pipe3_pc_plus_4_w),
 	.write_register_i(pipe2_write_register_w),
 	.reg_write_i(pipe2_reg_write_w),
+	.Rd_i(Rd_IDEX_w),
 	
 	////////////////////////////////////
 	
@@ -489,7 +519,8 @@ REGISTER_EX_MEM
 	.jmp_shifter_plus_pc_o(jmp_shifter_plus_pc_w),
 	.pc_plus_4_o(pipe4_pc_plus_4_w),
 	.write_register_o(pipe3_write_register_w),
-	.reg_write_o(pipe3_reg_write_w)
+	.reg_write_o(pipe3_reg_write_w),
+	.Rd_o(Rd_EXMEM_w)
 
 );
 
@@ -509,6 +540,7 @@ REGISTER_MEM_WB
 	.pc_plus_4_i(pipe4_pc_plus_4_w),
 	.read_data_mmry_i(pipe_read_data_mmry_w),
 	.alu_result_i(pipe2_alu_result_w),
+	.Rd_i(Rd_EXMEM_w),
 	
 	
 	////////////////////////////////
@@ -518,9 +550,104 @@ REGISTER_MEM_WB
 	.write_register_o(write_register_w),
 	.pc_plus_4_o(pc_plus_4_w),
 	.read_data_mmry_o(read_data_mmry_w),
-	.alu_result_o(alu_result_w)
+	.alu_result_o(alu_result_w),
+	.Rd_o(Rd_MEMWB_w)
+);
+
+Forward_Unit
+FORWARD_UNIT
+(
+	.reg_write_EXMEM_i(pipe3_reg_write_w),
+	.reg_write_MEMWB_i(reg_write_w),
+	.Rs_IDEX_i(Rs_IDEX_w),
+	.Rt_IDEX_i(Rt_IDEX_w),
+	.Rd_EXMEM_i(Rd_EXMEM_w),
+	.Rd_MEMWB_i(Rd_MEMWB_w),
+	
+	.forward_a_o(sel_forward_a_w),
+	.forward_b_o(sel_forward_b_w)
 
 );
 
+Multiplexer_4_to_1
+#(
+	.N_BITS(32)
+)
+MUX_RDATA_1_IDEX_R_EXMEM_R_MEMWB
+(
+	.selector_i(sel_forward_a_w),
+	
+	.data_0_i(read_data_1_w),
+	.data_1_i(pipe2_alu_result_w),
+	.data_2_i(read_data_mmry_r_alu_w),
+	.data_3_i(0),
+	
+	.mux_o(mux_o_rdata_1_idex_r_exmem_r_memwb_w)
+
+);
+
+Multiplexer_4_to_1
+#(
+	.N_BITS(32)
+)
+MUX_RDATA_2_IDEX_R_EXMEM_R_MEMWB
+(
+	.selector_i(sel_forward_b_w),
+	
+	.data_0_i(pipe2_read_data_2_w),
+	.data_1_i(pipe2_alu_result_w),
+	.data_2_i(read_data_mmry_r_alu_w),
+	.data_3_i(0),
+	
+	.mux_o(mux_o_rdata_2_idex_r_exmem_r_memwb_w)
+
+);
+
+Hazard_Detection_Unit
+HAZARD_DETECTION_UNIT
+(
+	.mem_read_IDEX_i(pipe2_mem_read_w),
+	.reset(reset),
+	.clk(clk),
+	.Rt_IDEX_i(Rt_IDEX_w),
+	.Rt_IFID_i(instruction_w[20:16]),
+	.Rs_IFID_i(instruction_w[25:21]),
+	
+	.PC_disenabler_o(PC_disenabler_w),
+	.IFID_disenabler_o(IFID_disenabler_w),
+	.control_cero_mux_o(control_zero_mux_w)
+);
+
+
+Control_Switch
+CONTROL_ZERO_SWITCH
+(
+	.selector_i(control_zero_mux_w),
+	
+	.reg_dst_i(swtch_reg_dst_w),
+	.branch_eq_i(swtch_pipe_branch_eq_w),
+	.branch_ne_i(swtch_pipe_branch_ne_w),
+	.mem_read_i(swtch_pipe_mem_read_w),
+	.mem_to_reg_i(swtch_pipe_mem_to_reg_w),
+	.mem_write_i(swtch_pipe_mem_write_w),
+	.alu_src_i(swtch_pipe_alu_src_w),
+	.reg_write_i(swtch_pipe_reg_write_w),
+	.jmp_i(swtch_pipe_jmp_w),
+	.alu_op_i(swtch_alu_op_w),
+	
+	/////////////////////////////
+
+	.reg_dst_o(reg_dst_w),
+	.branch_ne_o(pipe_branch_ne_w),
+	.branch_eq_o(pipe_branch_eq_w),
+	.alu_op_o(alu_op_w),
+	.alu_src_o(pipe_alu_src_w),
+	.reg_write_o(pipe_reg_write_w),
+	.mem_read_o(pipe_mem_read_w),
+	.mem_write_o(pipe_mem_write_w),
+	.mem_to_reg_o(pipe_mem_to_reg_w),
+	.jmp_o(pipe_jmp_w)
+
+);
 endmodule
 

@@ -10,7 +10,8 @@ module Pipeline_Register_MEMWB
 	
 	input	 mem_to_reg_i,
 	input  reg_write_i,
-	input  [4:0]write_register_i,
+	input  [4:0] write_register_i,
+	input  [4:0] Rd_i,
 	input  [31:0] pc_plus_4_i,
 	input  [31:0] read_data_mmry_i,
 	input  [31:0] alu_result_i,
@@ -20,10 +21,12 @@ module Pipeline_Register_MEMWB
 	
 	output mem_to_reg_o,
 	output reg_write_o,
-	output [4:0]write_register_o,
+	output [4:0] write_register_o,
+	output [4:0] Rd_o,
 	output [31:0] pc_plus_4_o,
 	output [31:0] read_data_mmry_o,
 	output [31:0] alu_result_o
+	
 	
 );
 
@@ -87,4 +90,13 @@ ALU_RESULT
 	.data_o(alu_result_o)
 );
 
+Pipeline_register
+RD
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(Rd_i),
+	.data_o(Rd_o)
+);
 endmodule

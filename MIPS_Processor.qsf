@@ -73,4 +73,8 @@ set_global_assignment -name VERILOG_FILE Sources/ALU.v
 set_global_assignment -name VERILOG_FILE Sources/Adder.v
 set_global_assignment -name VERILOG_FILE Sources/Pipeline_register_EXMEM.v
 set_global_assignment -name VERILOG_FILE Sources/Pipeline_Register_MEMWB.v
+set_global_assignment -name VERILOG_FILE Sources/Forward_Unit.v
+set_global_assignment -name VERILOG_FILE Sources/Multiplexer_4_to_1.v
+set_global_assignment -name VERILOG_FILE Sources/Hazard_Detection_Unit.v
+set_global_assignment -name VERILOG_FILE Sources/Control_Switch.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

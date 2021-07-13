@@ -1,0 +1,15 @@
+
+
+module Hazard_Detection_Unit
+#
+(
+	parameter N_BITS = 32
+)
+(
+	input [N_BITS-1:0] data_0_i,
+	input [N_BITS-1:0] data_1_i,
+	
+	output [N_BITS-1:0] result_o
+);
+
+

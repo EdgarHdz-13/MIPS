@@ -25,6 +25,9 @@ module Pipeline_Register_IDEX
 	input	 [10:6]  shamt_i,
 	input  [3:0]  alu_ctrl_i,
 	input	 [4:0]  write_register_i,
+	input  [4:0]  Rs_i,
+	input  [4:0]  Rt_i,
+	input  [4:0]  Rd_i,
 	
 	/////////////////////////////////////
 	
@@ -43,7 +46,10 @@ module Pipeline_Register_IDEX
 	output [31:0]  read_data_2_o,
 	output [10:6]  shamt_o,
 	output [3:0]  alu_ctrl_o,
-	output [4:0]  write_register_o
+	output [4:0]  write_register_o,
+	output [4:0]  Rs_o,
+	output [4:0]  Rt_o,
+	output [4:0]  Rd_o
 	
 );
 
@@ -204,6 +210,36 @@ REG_WRITE
 	.enable(1),
 	.data_i(reg_write_i),
 	.data_o(reg_write_o)
+);
+
+Pipeline_register
+RS
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(Rs_i),
+	.data_o(Rs_o)
+);
+
+Pipeline_register
+RT
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(Rt_i),
+	.data_o(Rt_o)
+);
+
+Pipeline_register
+RD
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.data_i(Rd_i),
+	.data_o(Rd_o)
 );
 
 endmodule

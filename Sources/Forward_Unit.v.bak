@@ -1,0 +1,14 @@
+
+module Forward_Unit
+(
+	input	reg_write_EXMEM_i,
+	input reg_write_MEMWB_i,
+	input [5:0] RS_IDEX_i,
+	input [5:0] RT_IDEX_i,
+	input [5:0] RD_EXMEM_i,
+	input [5:0] RD_MEMWB_i,
+	
+	output forward_a_o,
+	output forward_b_o
+
+);

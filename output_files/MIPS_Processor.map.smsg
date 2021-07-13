@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at Pipeline_register_EXMEM.v(23): object "jmp_shifter_plus_pc_i" differs only in case from object "JMP_SHIFTER_PLUS_PC_I" in the same scope File: C:/MIPS/Sources/Pipeline_register_EXMEM.v Line: 23
+Info (10281): Verilog HDL Declaration information at Pipeline_register_EXMEM.v(24): object "jmp_shifter_plus_pc_i" differs only in case from object "JMP_SHIFTER_PLUS_PC_I" in the same scope File: C:/MIPS/Sources/Pipeline_register_EXMEM.v Line: 24

@@ -1,4 +1,11 @@
-C:/MIPS/Sources/Mux_Register_File.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Mux_Register_File.v
+C:/MIPS/Sources/Pipeline_Register_EXMEM.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Pipeline_Register_EXMEM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Pipeline_Register_EXMEM
+
+Top level modules:
+	Pipeline_Register_EXMEM
+
+} {} {}} C:/MIPS/Sources/Mux_Register_File.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Mux_Register_File.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Mux_Register_File
 
@@ -18,6 +25,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	Program_Counter
+
+} {} {}} C:/MIPS/Sources/Multiplexer_4_to_1.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Multiplexer_4_to_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Multiplexer_4_to_1
+
+Top level modules:
+	Multiplexer_4_to_1
+
+} {} {}} C:/MIPS/Sources/Pipeline_Register_MEMWB.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Pipeline_Register_MEMWB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Pipeline_Register_MEMWB
+
+Top level modules:
+	Pipeline_Register_MEMWB
 
 } {} {}} C:/MIPS/Sources/Control.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Control.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -61,12 +82,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Register_File
 
-} {} {}} C:/MIPS/Sources/MIPS_Processor_TB.v {1 {vlog -work work -stats=none C:/MIPS/Sources/MIPS_Processor_TB.v
+} {} {}} C:/MIPS/Sources/Forward_Unit.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Forward_Unit.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MIPS_Processor_TB
+-- Compiling module Forward_Unit
 
 Top level modules:
-	MIPS_Processor_TB
+	Forward_Unit
 
 } {} {}} C:/MIPS/Sources/Pipeline_Register_IFID.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Pipeline_Register_IFID.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -81,6 +102,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	Register
+
+} {} {}} C:/MIPS/Sources/MIPS_Processor_TB.v {1 {vlog -work work -stats=none C:/MIPS/Sources/MIPS_Processor_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MIPS_Processor_TB
+
+Top level modules:
+	MIPS_Processor_TB
+
+} {} {}} C:/MIPS/Sources/Hazard_Detection_Unit.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Hazard_Detection_Unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Hazard_Detection_Unit
+
+Top level modules:
+	Hazard_Detection_Unit
 
 } {} {}} C:/MIPS/Sources/Program_Memory.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Program_Memory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -116,6 +151,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	Decoder_Register_File
+
+} {} {}} C:/MIPS/Sources/Control_Switch.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Control_Switch.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Control_Switch
+
+Top level modules:
+	Control_Switch
 
 } {} {}} C:/MIPS/Sources/ALU_Control.v {1 {vlog -work work -stats=none C:/MIPS/Sources/ALU_Control.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
