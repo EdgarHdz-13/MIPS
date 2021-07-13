@@ -399,13 +399,15 @@ MUX_READ_DATA_MEMORY_r_ALU
 
 Pipeline_Register_IFID
 #(
-	.MEMORY_DEPTH(MEMORY_DEPTH)
+	.MEMORY_DEPTH(MEMORY_DEPTH),
+	.FLUSH_ENABLE(1)
 )
 REGISTER_IF_ID
 (
 	.clk(clk),
 	.reset(reset),
 	
+	.flush_i(0),
 	.pc_i(pipe_pc_plus_4_w),
 	.instr_i(pipe_instruction_w),
 	.reg_enabler(IFID_disenabler_w),
