@@ -21,7 +21,7 @@ reg [N_BITS-1 : 0] data_flush_r = 0;
 always@(negedge reset or negedge clk) begin
 	if(reset==0)
 		data_o <= INITIAL_VALUE;
-	else if(flush_i == 1 && FLUSH_ENABLE == 1'b1)
+	else if(flush_i == 1 && FLUSH_ENABLE != 0)
 		data_o <= data_flush_r;
 		
 	else if(enable == 1)

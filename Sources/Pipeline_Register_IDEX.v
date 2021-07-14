@@ -1,7 +1,8 @@
 module Pipeline_Register_IDEX
 #
 (
-	parameter MEMORY_DEPTH = 32
+	parameter MEMORY_DEPTH = 32,
+	parameter FLUSH_ENABLE = 0
 )
 (
 
@@ -17,6 +18,7 @@ module Pipeline_Register_IDEX
 	input  mem_read_i,
 	input  alu_src_i,
 	input  reg_write_i,
+	input  flush_i,
 	input	 [31:0]  jmp_shifter_i,
 	input	 [31:0]	pc_i,
 	input  [31:0]  read_data_1_i,
@@ -54,189 +56,266 @@ module Pipeline_Register_IDEX
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 BRANCH_NE
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(branch_ne_i),
 	.data_o(branch_ne_o)
 );
+
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 BRANCH_EQ
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(branch_eq_i),
 	.data_o(branch_eq_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 JMP
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(jmp_i),
 	.data_o(jmp_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 MEM_WRITE
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(mem_write_i),
 	.data_o(mem_write_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 MEM_READ
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(mem_read_i),
 	.data_o(mem_read_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 ALU_SRC
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(alu_src_i),
 	.data_o(alu_src_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 JMP_SHIFTER_l_2
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(jmp_shifter_i),
 	.data_o(jmp_shifter_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 PC
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(pc_i),
 	.data_o(pc_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 READ_DATA_1
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(read_data_1_i),
 	.data_o(read_data_1_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 READ_DATA_2
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(read_data_2_i),
 	.data_o(read_data_2_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 SHAMT
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(shamt_i),
 	.data_o(shamt_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 ALU_CTRL
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(alu_ctrl_i),
 	.data_o(alu_ctrl_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 MEM_TO_REG
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(mem_to_reg_i),
 	.data_o(mem_to_reg_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 INMEDIATE_EXTEND
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(inmmediate_extend_i),
 	.data_o(inmmediate_extend_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 WRITE_REGISTER
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(write_register_i),
 	.data_o(write_register_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 REG_WRITE
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(reg_write_i),
 	.data_o(reg_write_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 RS
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(Rs_i),
 	.data_o(Rs_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 RT
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(Rt_i),
 	.data_o(Rt_o)
 );
 
 Pipeline_register
+#(
+	.FLUSH_ENABLE(FLUSH_ENABLE)
+)
 RD
 (
 	.clk(clk),
 	.reset(reset),
+	.flush_i(flush_i),
 	.enable(1),
 	.data_i(Rd_i),
 	.data_o(Rd_o)
