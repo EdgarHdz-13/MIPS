@@ -14,7 +14,7 @@ module Hazard_Detection_Unit
 	
 	output PC_disenabler_o,
 	output IFID_disenabler_o,
-	output control_cero_mux_o,
+	output control_zero_mux_o,
 	
 	output flush_o
 );
@@ -23,7 +23,7 @@ reg [3:0] control_hazard_r = 4'b0000;
 always@(mem_read_IDEX_i,Rt_IDEX_i,Rt_IFID_i,Rs_IFID_i,branch_i,jmp_i,topc_i) begin
 
 	if((branch_i == 1)||(jmp_i == 1)||(topc_i == 1))
-		control_hazard_r = 4'b1101;
+		control_hazard_r = 4'b0001;
 	else if(mem_read_IDEX_i == 1 && (Rt_IDEX_i == Rt_IFID_i ||  Rt_IDEX_i == Rs_IFID_i) )
 		control_hazard_r = 4'b1110;
 	else
@@ -31,7 +31,7 @@ always@(mem_read_IDEX_i,Rt_IDEX_i,Rt_IFID_i,Rs_IFID_i,branch_i,jmp_i,topc_i) beg
 
 end
 
-assign control_cero_mux_o = control_hazard_r[3];
+assign control_zero_mux_o = control_hazard_r[3];
 assign IFID_disenabler_o = control_hazard_r[2];
 assign PC_disenabler_o = control_hazard_r[1];
 assign flush_o = control_hazard_r[0];

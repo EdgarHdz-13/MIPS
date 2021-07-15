@@ -8,7 +8,7 @@ module Pipeline_Register_IFID
 
 	input  clk,
 	input  reset,
-	input  reg_enabler,
+	input  reg_disenabler_i,
 	input  flush_i,
 	input	 [31:0]  pc_i,
 	input  [31:0]  instr_i,
@@ -27,7 +27,7 @@ PC
 	.clk(clk),
 	.reset(reset),
 	.flush_i(flush_i),
-	.enable(~reg_enabler),
+	.enable(~reg_disenabler_i),
 	.data_i(pc_i),
 	.data_o(pc_o)
 );
@@ -41,7 +41,7 @@ INSTR
 	.clk(clk),
 	.reset(reset),
 	.flush_i(flush_i),
-	.enable(~reg_enabler),
+	.enable(~reg_disenabler_i),
 	.data_i(instr_i),
 	.data_o(instr_o)
 );
