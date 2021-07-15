@@ -110,6 +110,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	Pipeline_Register_IFID
 
+} {} {}} C:/MIPS/Sources/Hazard_Detection_Unit.v {1 {vlog -work work -stats=none C:/MIPS/Sources/Hazard_Detection_Unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Hazard_Detection_Unit
+
+Top level modules:
+	Hazard_Detection_Unit
+
 } {} {}} C:/MIPS/Sources/MIPS_Processor.v {1 {vlog -work work -stats=none C:/MIPS/Sources/MIPS_Processor.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MIPS_Processor
